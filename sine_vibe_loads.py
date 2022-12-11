@@ -4,6 +4,7 @@
 #  It will come up with the max load based on maximum [P, V1, V2, T, M2, M1, VRSS, MRSS, Sigma_Bending ]
 
 from enum import Enum
+from typing import Dict, List
 import numpy as np
 import math
 from pyNastran.bdf.bdf import BDF
@@ -11,7 +12,7 @@ from pyNastran.op2.op2 import OP2
 from nasDataTypes import Property
 import pickle
 import os
-from my_types import ElementSummary
+from typing_extensions import TypedDict
 
 
 class LoadCaseId(Enum):
@@ -353,6 +354,8 @@ def writeCriticalFrequenciesMagnitude(element_critical_frequencies: object, elem
     if not os.path.exists(target_dir):
         os.mkdir(target_dir)
 
+    ElementSummary = TypedDict('ElementSummary', {'load_case_ids': List[str], 'loads': List[List[float]], 'freqs': List[float]} )
+    ElementSummaryDict = Dict[str, ElementSummary]
     element_summary: ElementSummary = {}
 
     for element_id in element_critical_frequencies:
