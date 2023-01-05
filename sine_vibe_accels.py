@@ -216,22 +216,27 @@ def write_nodal_accelerations_to_excel(nodal_accelerations, output_file_name, li
     # add a bold format to use to highlight cells
     bold = workbook.add_format({'bold': True})
 
-    # write the header
-    worksheet.write('A1', 'Node ID', bold)
-    worksheet.write('B1', 'Frequency (Hz)', bold)
-    worksheet.write('C1', 'Ax (G)', bold)
-    worksheet.write('D1', 'Ay (G)', bold)
-    worksheet.write('E1', 'Az (G)', bold)
-    worksheet.write('F1', 'Ax Limit (G)', bold)
-    worksheet.write('G1', 'Ay Limit (G)', bold)
-    worksheet.write('H1', 'Az Limit (G)', bold)
+
+
 
     # write the data
-    row = 1
+    row = 2
     col = 0
 
-    # FOREST UPDATE THE CODE HERE !!
-    for node_id, accels in nodal_accelerations.items():
+    for node_id in nodal_accelerations:
+
+
+        # write the header
+
+        center_format = workbook.add_format({'align': 'center'})
+        worksheet.merge_range(0, 0, 0, 6, f'{node_id}',center_format)
+        worksheet.write('A2', 'Frequency (Hz)', bold)
+        worksheet.write('B2', 'Ax (G)', bold)
+        worksheet.write('C2', 'Ay (G)', bold)
+        worksheet.write('D2', 'Az (G)', bold)
+
+        # extract the nodal accelerations
+        accels = nodal_accelerations.get(node_id)
         if accels is None:
             print('node id {} not found in nodal_accelerations dictionary'.format(node_id))
             continue
@@ -240,21 +245,35 @@ def write_nodal_accelerations_to_excel(nodal_accelerations, output_file_name, li
         ay = [accel[2] for accel in accels]
         az = [accel[3] for accel in accels]
 
-        # # interpolate the limit accelerations to the frequencies of the accelerations
-        # if limit_accels is not None:
-        #     ax_limits = np.interp(freqs, limit_freqs, ax_limits)
-        #     ay_limits = np.interp(freqs, limit_freqs, ay_limits)
-        #     az_limits = np.interp(freqs, limit_freqs, az_limits)
-        #     ax_limits = [ax_limit if ax_limit > 0 else 0 for ax_limit in ax_limits]
-        #     ay_limits = [ay_limit if ay_limit > 0 else 0 for ay_limit in ay_limits]
-        #     az_limits = [az_limit if az_limit > 0 else 0 for az_limit in az_limits]
+        # extract and interpolate the limit accels for the node if it exists
+        nodal_limit_accels = limit_accels.get(node_id) if limit_accels is not None else None
 
+        if nodal_limit_accels:
+            worksheet.write('E2', 'Ax Limit (G)', bold)
+            worksheet.write('F2', 'Ay Limit (G)', bold)
+            worksheet.write('G2', 'Az Limit (G)', bold)
+            limit_freqs = [accel[0] for accel in nodal_limit_accels]
+            ax_limits = [accel[1] for accel in nodal_limit_accels]
+            ay_limits = [accel[2] for accel in nodal_limit_accels]
+            az_limits = [accel[3] for accel in nodal_limit_accels]
+            ax_limits = np.interp(freqs, limit_freqs, ax_limits)
+            ay_limits = np.interp(freqs, limit_freqs, ay_limits)
+            az_limits = np.interp(freqs, limit_freqs, az_limits)
+            ax_limits = [ax_limit if ax_limit > 0 else 0 for ax_limit in ax_limits]
+            ay_limits = [ay_limit if ay_limit > 0 else 0 for ay_limit in ay_limits]
+            az_limits = [az_limit if az_limit > 0 else 0 for az_limit in az_limits]
+
+
+        # write the data to the excel file
         for i in range(len(freqs)):
-            worksheet.write(row, col, node_id)
-            worksheet.write(row, col + 1, freqs[i])
-            worksheet.write(row, col + 2, ax[i])
-            worksheet.write(row, col + 3, ay[i])
+            worksheet.write(row, col, freqs[i])
+            worksheet.write(row, col + 1, ax[i])
+            worksheet.write(row, col + 2, ay[i])
             worksheet.write(row, col + 3, az[i])
+            if nodal_limit_accels:
+                worksheet.write(row, col + 4, ax_limits[i])
+                worksheet.write(row, col + 5, ay_limits[i])
+                worksheet.write(row, col + 6, az_limits[i])
             worksheet.write
             row += 1
 
@@ -289,10 +308,6 @@ def load_pickled_nodal_accelerations():
 
 
 
-
-    print('pause here')
-
-
 if __name__ == "__main__":
 
 
@@ -310,14 +325,9 @@ if __name__ == "__main__":
     nodal_accels = load_pickled_nodal_accelerations()
     limit = [(5,1,15,1), (10,1,15,1),(25,1,15,1),(20,1,5,1),(100,1,5,1)]
     nodal_limits = {181:limit}
-    plot_nodal_accelerations(nodal_accels, nodal_limits)
-    write_nodal_accelerations_to_excel(nodal_accels, 'nodal_accels.xlsx')
+    # plot_nodal_accelerations(nodal_accels, nodal_limits)
+    write_nodal_accelerations_to_excel(nodal_accels, 'nodal_accels.xlsx', nodal_limits)
 
-
-
-
-
-    print('pause here')
 
 
 
