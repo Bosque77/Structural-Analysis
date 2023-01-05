@@ -64,15 +64,16 @@ def get_nodal_accelerations(op2: object, node_ids: set):
 
 
 # 2) plot nodal accelerations
-def plot_nodal_accelerations(nodal_accelerations: dict, nodal_limits: dict = None):
+def plot_nodal_accelerations(nodal_accelerations: dict, nodal_limits: dict = {}, nodal_names:dict = {}):
     """
     takes in a dictionary that contains node_ids as keys and a list of tuples (frequency , ax, ay, az) as values
     and plots the accelerations  ax vs. frequency, ay vs. frequency, az vs. frequency in a pdf file.  
 
     :param_1 nodal_accelerations: dictionary that contains node_ids as keys and a list of tuples (frequency , ax, ay, az) as values 
-    ex: {node_id:num : [(freq:num, ax:num, ay:num, az:num), (freq:num, ax:num, ay:num, az:num), ...]}
+        ex: {node_id:num : [(freq:num, ax:num, ay:num, az:num), (freq:num, ax:num, ay:num, az:num), ...]}
     :param_2 nodal_limits: dictionary that contains node_ids as keys and a list of tuples (min_freq, max_freq, min_accel, max_accel) as values
-    ex: {node_id:num : [(freq:num, ax:num, ay:num, az:num), (freq:num, ax:num, ay:num, az:num), ...]}
+        ex: {node_id:num : [(freq:num, ax:num, ay:num, az:num), (freq:num, ax:num, ay:num, az:num), ...]}
+    :param_3 nodal_names: dictionary that contains the node_ids and there corresponding names {node_id:num: name:str}
     :return: None
 
 
@@ -88,6 +89,9 @@ def plot_nodal_accelerations(nodal_accelerations: dict, nodal_limits: dict = Non
 
     # plot the accelerations for each node
     for node_id in nodal_accelerations:
+
+        # nodal name
+        nodal_name = nodal_names.get(node_id)
 
         # limit accels
         limit_accels = nodal_limits.get(node_id)
@@ -135,7 +139,13 @@ def plot_nodal_accelerations(nodal_accelerations: dict, nodal_limits: dict = Non
         axs[0].plot(freqs, ax, label='ax')
         if limit_accels is not None:
             axs[0].plot(freqs, ax_limits, label='ax limits', linestyle='--', color='red')
-        axs[0].set_title('Nodal Accelerations at Node {}'.format(node_id), family='serif', fontsize=10)
+
+        if nodal_name is not None:
+            title = 'Nodal Accelerations at Node {} ({})'.format(node_id, nodal_name)
+        else:
+            title = 'Nodal Accelerations at Node {}'.format(node_id)
+
+        axs[0].set_title(title, family='serif', fontsize=10)
         axs[0].autoscale(enable=True, axis='y', tight=None)
         if max_ax_val > 1:
             axs[0].yaxis.set_major_locator(MaxNLocator(nbins=4, integer=True))
@@ -194,18 +204,21 @@ def plot_nodal_accelerations(nodal_accelerations: dict, nodal_limits: dict = Non
 
 
 # 3) write nodal accelerations to excel file
-def write_nodal_accelerations_to_excel(nodal_accelerations, output_file_name, limit_accels=None):
+def write_nodal_accelerations_to_excel(output_file_name:str, nodal_accelerations:dict, limit_accels:dict = {}, nodal_names:dict = {}):
     """
     Write the nodal accelerations to an excel file
     
     Parameters
     ----------
-    nodal_accelerations : dict
-        A dictionary of nodal accelerations
-    limit_accels : dict
-        A dictionary of limit accelerations
     output_file_name : str
-        The name of the output file
+        The name of the output file   "output.xlsx"
+    nodal_accelerations : dict
+        A dictionary of nodal accelerations  {node_id: [(freq, ax, ay, az)]]}
+    limit_accels : dict
+        A dictionary of limit accelerations {node_id: [(freq, ax, ay, az)]]}
+    nodal_name: dict
+        A dictionary containing the node names   {node_id: nod_name}
+
 
     """
 
@@ -229,7 +242,15 @@ def write_nodal_accelerations_to_excel(nodal_accelerations, output_file_name, li
         # write the header
 
         center_format = workbook.add_format({'align': 'center'})
-        worksheet.merge_range(0, 0, 0, 6, f'{node_id}',center_format)
+
+        nodal_name = nodal_names.get(node_id)
+
+        if nodal_name is not None:
+            data_name = f'{node_id} - {nodal_name}'
+        else:
+            data_name = f'{node_id}'
+        
+        worksheet.merge_range(0, 0, 0, 6, data_name,center_format)
         worksheet.write('A2', 'Frequency (Hz)', bold)
         worksheet.write('B2', 'Ax (G)', bold)
         worksheet.write('C2', 'Ay (G)', bold)
@@ -240,10 +261,10 @@ def write_nodal_accelerations_to_excel(nodal_accelerations, output_file_name, li
         if accels is None:
             print('node id {} not found in nodal_accelerations dictionary'.format(node_id))
             continue
-        freqs = [accel[0] for accel in accels]
-        ax = [accel[1] for accel in accels]
-        ay = [accel[2] for accel in accels]
-        az = [accel[3] for accel in accels]
+        freqs = [round(accel[0],3) for accel in accels]
+        ax = [round(accel[1],2) for accel in accels]
+        ay = [round(accel[2],2) for accel in accels]
+        az = [round(accel[3],2) for accel in accels]
 
         # extract and interpolate the limit accels for the node if it exists
         nodal_limit_accels = limit_accels.get(node_id) if limit_accels is not None else None
@@ -259,9 +280,9 @@ def write_nodal_accelerations_to_excel(nodal_accelerations, output_file_name, li
             ax_limits = np.interp(freqs, limit_freqs, ax_limits)
             ay_limits = np.interp(freqs, limit_freqs, ay_limits)
             az_limits = np.interp(freqs, limit_freqs, az_limits)
-            ax_limits = [ax_limit if ax_limit > 0 else 0 for ax_limit in ax_limits]
-            ay_limits = [ay_limit if ay_limit > 0 else 0 for ay_limit in ay_limits]
-            az_limits = [az_limit if az_limit > 0 else 0 for az_limit in az_limits]
+            ax_limits = [round(ax_limit,2) if ax_limit > 0 else 0 for ax_limit in ax_limits]
+            ay_limits = [round(ay_limit,2) if ay_limit > 0 else 0 for ay_limit in ay_limits]
+            az_limits = [round(az_limit,2) if az_limit > 0 else 0 for az_limit in az_limits]
 
 
         # write the data to the excel file
@@ -325,8 +346,9 @@ if __name__ == "__main__":
     nodal_accels = load_pickled_nodal_accelerations()
     limit = [(5,1,15,1), (10,1,15,1),(25,1,15,1),(20,1,5,1),(100,1,5,1)]
     nodal_limits = {181:limit}
-    # plot_nodal_accelerations(nodal_accels, nodal_limits)
-    write_nodal_accelerations_to_excel(nodal_accels, 'nodal_accels.xlsx', nodal_limits)
+    nodal_names = {181:'Lower Bar', 182:'Node 2'}
+    plot_nodal_accelerations(nodal_accels, nodal_limits, nodal_names)
+    # write_nodal_accelerations_to_excel('nodal_accels.xlsx', nodal_accels,nodal_limits, nodal_names)
 
 
 
