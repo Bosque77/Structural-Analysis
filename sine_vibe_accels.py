@@ -61,9 +61,117 @@ def get_nodal_accelerations(op2: object, node_ids: set):
 
     return node_id_to_accels
 
+# 2) read in the nodal limits file to determine your acceleration limits
+def read_nodal_limits(file_name: str):
+    """
+    takes in a file name and returns a dictionary that contains node_ids as keys and a list of tuples (freq, ax, ay, az) as values.
+    the limits file is a text file that contains the node ids and the acceleration limits for each node id
+    the format of the limits file must be as follows:
 
 
-# 2) plot nodal accelerations
+
+    ex: 
+        Node 1 X  # to start recording data for node 1 in the x direction (capitalizaiton does not matter)
+        5   10    # frequency 5 has an acceleration limit of 10
+        10  15    # frequency 10 has an acceleration limit of 15 
+        15  15    # ...
+        16  5
+        100 5
+
+    
+
+    :param file_name: file name of the nodal limits file
+    :return: dictionary that contains node_ids:num as keys and a list of tuples (freq, ax, ay, az) as values
+
+    ex: {node_id:num : [(freq:num, ax:num, ay:num, az:num), (freq:num, ax:num, ay:num, az:num), ...]}
+    }
+    """
+
+
+    nodal_limits = {}
+
+    # open the file
+    with open(file_name, 'r') as file:
+        lines = file.readlines()
+
+
+    record_data = False
+
+    # create a dictionary that contains node_ids as keys and a list of tuples (freq, ax, ay, az) as values
+    node_id_to_limits = {}
+    for line in lines:
+        line = line.strip()
+        if line == '' or line.startswith('#'):
+            record_data = False
+            continue
+        
+
+
+        line = line.split(' ')
+        line = [_ for _ in line if _ != '']
+        if line[0].lower() == 'node':
+            record_data = True
+            node_id = int(line[1])
+            direction = line[2].lower()
+
+            if node_id not in node_id_to_limits:
+                node_id_to_limits[node_id] = {}
+
+            continue
+
+
+        if record_data:
+            freq = float(line[0])
+            acc_limit = float(line[1])
+
+            limits = node_id_to_limits.get(node_id)
+            freq_limits = limits.get(freq)
+            if freq_limits is None:
+                if direction == 'x':
+                    freq_limits = {'x': acc_limit, 'y': 0, 'z': 0}
+                elif direction == 'y':
+                    freq_limits = {'x': 0, 'y': acc_limit, 'z': 0}
+                elif direction == 'z':
+                    freq_limits = {'x': 0, 'y': 0, 'z': acc_limit}
+                else:
+                    raise ValueError('direction must be x, y, or z')
+            else:
+                if direction == 'x':
+                    freq_limits['x'] = acc_limit
+                elif direction == 'y':
+                    freq_limits['y'] = acc_limit
+                elif direction == 'z':
+                    freq_limits['z'] = acc_limit
+                else:
+                    raise ValueError('direction must be x, y, or z')
+
+            limits[freq] = freq_limits
+            node_id_to_limits[node_id] = limits
+
+
+    # convert the dictionary to a list of tuples
+    for node_id in node_id_to_limits:
+        limits = node_id_to_limits[node_id]
+        freq_limits = []
+        for freq in limits:
+            freq_limits.append((freq, limits[freq]['x'], limits[freq]['y'], limits[freq]['z']))
+        node_id_to_limits[node_id] = freq_limits
+
+    return node_id_to_limits
+
+
+
+
+
+
+
+
+
+
+
+    return node_id_to_limits
+
+# 3) plot nodal accelerations
 def plot_nodal_accelerations(nodal_accelerations: dict, nodal_limits: dict = {}, nodal_names:dict = {}):
     """
     takes in a dictionary that contains node_ids as keys and a list of tuples (frequency , ax, ay, az) as values
@@ -203,7 +311,7 @@ def plot_nodal_accelerations(nodal_accelerations: dict, nodal_limits: dict = {},
     pdf.close()
 
 
-# 3) write nodal accelerations to excel file
+# 4) write nodal accelerations to excel file
 def write_nodal_accelerations_to_excel(output_file_name:str, nodal_accelerations:dict, limit_accels:dict = {}, nodal_names:dict = {}):
     """
     Write the nodal accelerations to an excel file
@@ -301,13 +409,14 @@ def write_nodal_accelerations_to_excel(output_file_name:str, nodal_accelerations
     workbook.close()
 
 
+
+
 # -------------------- Helper Functions--------------------#
 def pickle_op2(op2_file_name):
     op2 = OP2()
     op2.read_op2(op2_file_name)
     with open('op2_model.pkl', 'wb') as outfile:
         pickle.dump(op2, outfile)
-
 
 def load_pickled_op2():
     with open('op2_model.pkl', 'rb') as infile:
@@ -322,7 +431,6 @@ def load_pickled_nodal_accelerations():
     with open('nodal_accelerations.pkl', 'rb') as infile:
         nodal_accelerations = pickle.load(infile)
     return nodal_accelerations
-
 
 
 
@@ -344,8 +452,9 @@ if __name__ == "__main__":
     # pickle_nodal_accelerations(nodal_accels)
 
     nodal_accels = load_pickled_nodal_accelerations()
-    limit = [(5,1,15,1), (10,1,15,1),(25,1,15,1),(20,1,5,1),(100,1,5,1)]
-    nodal_limits = {181:limit}
+    nodal_limits = read_nodal_limits('limits.txt')
+    # limit = [(5,1,15,1), (10,1,15,1),(25,1,15,1),(20,1,5,1),(100,1,5,1)]
+    # nodal_limits = {181:limit}
     nodal_names = {181:'Lower Bar', 182:'Node 2'}
     plot_nodal_accelerations(nodal_accels, nodal_limits, nodal_names)
     # write_nodal_accelerations_to_excel('nodal_accels.xlsx', nodal_accels,nodal_limits, nodal_names)
