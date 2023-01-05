@@ -2,7 +2,7 @@ from pyNastran.bdf.bdf import BDF
 from pyNastran.op2.op2 import OP2
 import pickle
 import numpy as np
-from matplotlib.ticker import MaxNLocator
+from matplotlib.ticker import MaxNLocator, AutoMinorLocator
 import matplotlib.pyplot as plt
 from matplotlib.backends.backend_pdf import PdfPages
 
@@ -14,7 +14,10 @@ def get_nodal_accelerations(op2: object, node_ids: set):
 
     :param op2: op2 object
     :param node_ids: list of node ids
-    :return: dictionary that contains node_ids as keys and a list of tuples (frequency , ax, ay, az) as values
+    :return: dictionary that contains node_ids:num as keys and a list of tuples (frequency:num , ax:num, ay:num, az:num) as values
+
+    ex: {node_id:num : [(freq:num, ax:num, ay:num, az:num), (freq:num, ax:num, ay:num, az:num), ...]}
+    }
     """
 
 
@@ -65,7 +68,10 @@ def plot_nodal_accelerations(nodal_accelerations: dict, nodal_limits: dict = Non
     takes in a dictionary that contains node_ids as keys and a list of tuples (frequency , ax, ay, az) as values
     and plots the accelerations  ax vs. frequency, ay vs. frequency, az vs. frequency in a pdf file.  
 
-    :param nodal_accelerations: dictionary that contains node_ids as keys and a list of tuples (frequency , ax, ay, az) as values
+    :param_1 nodal_accelerations: dictionary that contains node_ids as keys and a list of tuples (frequency , ax, ay, az) as values 
+    ex: {node_id:num : [(freq:num, ax:num, ay:num, az:num), (freq:num, ax:num, ay:num, az:num), ...]}
+    :param_2 nodal_limits: dictionary that contains node_ids as keys and a list of tuples (min_freq, max_freq, min_accel, max_accel) as values
+    ex: {node_id:num : [(freq:num, ax:num, ay:num, az:num), (freq:num, ax:num, ay:num, az:num), ...]}
     :return: None
 
 
@@ -81,12 +87,37 @@ def plot_nodal_accelerations(nodal_accelerations: dict, nodal_limits: dict = Non
 
     # plot the accelerations for each node
     for node_id in nodal_accelerations:
-        # extract the accelerations and frequencies
-        accels = nodal_accelerations[node_id]
+
+        # limit accels
+        limit_accels = nodal_limits.get(node_id)
+        if limit_accels is not None:
+            limit_freqs = [accel[0] for accel in limit_accels]
+            ax_limits = [accel[1] for accel in limit_accels]
+            ay_limits = [accel[2] for accel in limit_accels]
+            az_limits = [accel[3] for accel in limit_accels]
+
+        
+        # extract the nodal accelerations and frequencies for the specified node id
+        accels = nodal_accelerations.get(node_id)
+        if accels is None:
+            print('node id {} not found in nodal_accelerations dictionary'.format(node_id))
+            continue
         freqs = [accel[0] for accel in accels]
         ax = [accel[1] for accel in accels]
         ay = [accel[2] for accel in accels]
         az = [accel[3] for accel in accels]
+
+
+        # interpolate the limit accelerations to the frequencies of the accelerations
+        if limit_accels is not None:
+            ax_limits = np.interp(freqs, limit_freqs, ax_limits)
+            ay_limits = np.interp(freqs, limit_freqs, ay_limits)
+            az_limits = np.interp(freqs, limit_freqs, az_limits)
+            ax_limits = [ax_limit if ax_limit > 0 else 0 for ax_limit in ax_limits]
+            ay_limits = [ay_limit if ay_limit > 0 else 0 for ay_limit in ay_limits]
+            az_limits = [az_limit if az_limit > 0 else 0 for az_limit in az_limits]
+        
+
 
         # plot the accelerations
         fig, axs = plt.subplots(3, 1, sharex=True)
@@ -101,11 +132,14 @@ def plot_nodal_accelerations(nodal_accelerations: dict, nodal_limits: dict = Non
 
 
         axs[0].plot(freqs, ax, label='ax')
+        if limit_accels is not None:
+            axs[0].plot(freqs, ax_limits, label='ax limits', linestyle='--', color='red')
         axs[0].set_title('Nodal Accelerations at Node {}'.format(node_id), family='serif', fontsize=10)
         axs[0].autoscale(enable=True, axis='y', tight=None)
         if max_ax_val > 1:
             axs[0].yaxis.set_major_locator(MaxNLocator(nbins=4, integer=True))
-            axs[0].set_ylim(bottom=0, top=max_ax_val*1.1)
+            axs[0].yaxis.set_minor_locator(AutoMinorLocator(4))
+
 
         axs[0].tick_params(axis='both', which='major', labelsize=8)
         axs[0].set_ylabel('Acceleration (G)', fontsize=8, family='serif')
@@ -116,10 +150,13 @@ def plot_nodal_accelerations(nodal_accelerations: dict, nodal_limits: dict = Non
 
 
         axs[1].plot(freqs, ay, label='ay')
+        if limit_accels is not None:
+            axs[1].plot(freqs, ay_limits, label='ay limits', linestyle='--', color='red')
         axs[1].autoscale(enable=True, axis='y', tight=None)
         if max_ay_val > 1:
             axs[1].yaxis.set_major_locator(MaxNLocator(nbins=4, integer=True))
-            axs[1].set_ylim(bottom=0, top=max_ay_val*1.1)
+            axs[1].yaxis.set_minor_locator(AutoMinorLocator(4))
+
 
         axs[1].tick_params(axis='both', which='major', labelsize=8)
         axs[1].set_ylabel('Acceleration (G)', fontsize=8, family='serif')
@@ -129,11 +166,13 @@ def plot_nodal_accelerations(nodal_accelerations: dict, nodal_limits: dict = Non
 
 
         axs[2].plot(freqs, az, label='az')
-
+        if limit_accels is not None:
+            axs[2].plot(freqs, az_limits, label='az limits', linestyle='--', color='red')
         axs[2].autoscale(enable=True, axis='y', tight=None)
         if max_az_val > 1:
             axs[2].yaxis.set_major_locator(MaxNLocator(nbins=4, integer=True))
-            axs[2].set_ylim(bottom=0, top=max_az_val*1.1)
+            axs[2].yaxis.set_minor_locator(AutoMinorLocator(4))
+
 
         axs[2].tick_params(axis='both', which='major', labelsize=8)
         axs[2].set_ylabel('Acceleration (G)', fontsize=8, family='serif')
@@ -201,7 +240,9 @@ if __name__ == "__main__":
     # pickle_nodal_accelerations(nodal_accels)
 
     nodal_accels = load_pickled_nodal_accelerations()
-    plot_nodal_accelerations(nodal_accels)
+    limit = [(5,1,15,1), (10,1,15,1),(25,1,15,1),(20,1,5,1),(100,1,5,1)]
+    nodal_limits = {181:limit}
+    plot_nodal_accelerations(nodal_accels, nodal_limits)
 
 
 
