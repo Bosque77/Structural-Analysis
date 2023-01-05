@@ -60,21 +60,24 @@ def get_nodal_accelerations(op2: object, node_ids: set):
 
 
 # 2) plot nodal accelerations
-def plot_nodal_accelerations(nodal_accelerations: dict):
+def plot_nodal_accelerations(nodal_accelerations: dict, nodal_limits: dict = None):
     """
     takes in a dictionary that contains node_ids as keys and a list of tuples (frequency , ax, ay, az) as values
     and plots the accelerations  ax vs. frequency, ay vs. frequency, az vs. frequency in a pdf file.  
 
     :param nodal_accelerations: dictionary that contains node_ids as keys and a list of tuples (frequency , ax, ay, az) as values
     :return: None
-    # set the font to times new roman
-    plt.rcParams['font.family'] = 'Times New Roman'
+
 
     """
     
 
     # create a pdf file to store the plots
     pdf = PdfPages('nodal_accelerations.pdf')
+
+
+
+
 
     # plot the accelerations for each node
     for node_id in nodal_accelerations:
@@ -87,30 +90,42 @@ def plot_nodal_accelerations(nodal_accelerations: dict):
 
         # plot the accelerations
         fig, axs = plt.subplots(3, 1, sharex=True)
+
+
+
+
         max_ax_val = max(ax)
         max_ay_val = max(ay)
         max_az_val = max(az)
 
 
+
         axs[0].plot(freqs, ax, label='ax')
-        axs[0].set_title('Nodal Accelerations at Node {}'.format(node_id))
+        axs[0].set_title('Nodal Accelerations at Node {}'.format(node_id), family='serif', fontsize=10)
         axs[0].autoscale(enable=True, axis='y', tight=None)
         if max_ax_val > 1:
             axs[0].yaxis.set_major_locator(MaxNLocator(nbins=4, integer=True))
-        axs[0].set_ylabel('Acceleration (G)', fontsize=8)
+            axs[0].set_ylim(bottom=0, top=max_ax_val*1.1)
+
+        axs[0].tick_params(axis='both', which='major', labelsize=8)
+        axs[0].set_ylabel('Acceleration (G)', fontsize=8, family='serif')
         axs[0].legend()
         axs[0].grid()
+        axs[0].grid(which='minor', alpha=0.2)
+
 
 
         axs[1].plot(freqs, ay, label='ay')
         axs[1].autoscale(enable=True, axis='y', tight=None)
         if max_ay_val > 1:
             axs[1].yaxis.set_major_locator(MaxNLocator(nbins=4, integer=True))
-        axs[1].set_ylim(bottom=0, top=max_ay_val*1.1)
-        axs[1].set_ylabel('Acceleration (G)', fontsize=8)
+            axs[1].set_ylim(bottom=0, top=max_ay_val*1.1)
+
+        axs[1].tick_params(axis='both', which='major', labelsize=8)
+        axs[1].set_ylabel('Acceleration (G)', fontsize=8, family='serif')
         axs[1].legend()
         axs[1].grid()
-
+        axs[1].grid(which='minor', alpha=0.2)
 
 
         axs[2].plot(freqs, az, label='az')
@@ -118,14 +133,18 @@ def plot_nodal_accelerations(nodal_accelerations: dict):
         axs[2].autoscale(enable=True, axis='y', tight=None)
         if max_az_val > 1:
             axs[2].yaxis.set_major_locator(MaxNLocator(nbins=4, integer=True))
-        axs[2].set_ylim(bottom=0, top=max_az_val*1.1)
-        axs[2].set_ylabel('Acceleration (G)', fontsize=8)
+            axs[2].set_ylim(bottom=0, top=max_az_val*1.1)
+
+        axs[2].tick_params(axis='both', which='major', labelsize=8)
+        axs[2].set_ylabel('Acceleration (G)', fontsize=8, family='serif')
         axs[2].legend()
-        axs[2].grid()
+
+
         axs[2].set_xlim(left=0, right=100)
         axs[2].set_xlabel('Frequency (Hz)', fontsize=8)
         axs[2].set_xticks(np.arange(0, max(freqs), 10))
         axs[2].set_xticks(np.arange(0, max(freqs), 5), minor=True)
+        axs[2].grid()
         axs[2].grid(which='minor', alpha=0.2)
   
         pdf.savefig(fig)
