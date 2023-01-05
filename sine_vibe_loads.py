@@ -3,16 +3,18 @@
 # Summary:  This module is used to determine the max loadcases for elements in a sine vibe analysis
 #  It will come up with the max load based on maximum [P, V1, V2, T, M2, M1, VRSS, MRSS, Sigma_Bending ]
 
+import math
+import os
+import pickle
 from enum import Enum
 from typing import Dict, List
+
 import numpy as np
-import math
 from pyNastran.bdf.bdf import BDF
 from pyNastran.op2.op2 import OP2
-from nasDataTypes import Property
-import pickle
-import os
 from typing_extensions import TypedDict
+
+from nasDataTypes import Property
 
 
 class LoadCaseId(Enum):
@@ -451,8 +453,13 @@ def writeCriticalFrequenciesWithPhase(element_critical_frequencies: object, elem
 # 7)  Run your Vibe Processor!
 def runVibeProcessor(bdf_file_name: str, op2_file_name: str, element_ids: set, info_pickled: bool = False, phase_data: bool = False):
     """
-    takes in the bdf file name, op2 file name and a set of element ids and determines if
-    param_1:
+    determines the max load case for each element and writes the loads to a csv file
+    param_1: bdf_file_name
+    param_2: op2_file_name
+    param_3: element_ids
+    param_4: info_pickled (default = False)
+    param_5: phase_data (default = False)
+    returns: None (Writes element loads to a csv file)
     """
 
     if not info_pickled:
