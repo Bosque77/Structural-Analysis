@@ -1,0 +1,418 @@
+1
+ 
+ 
+ 
+ 
+                      Warning: This computer program is protected by copyright law and international treaties.       
+                  Unauthorized use, reproduction or distribution of this computer program, or any portion of it, may 
+                                          result in severe civil and criminal penalties.                             
+                         Copyright (C) 2016 MSC Software Corporation and its licensors. All rights reserved.         
+ 
+ 
+                                              * * * * * * * * * * * * * * * * * * * *
+                                              * * * * * * * * * * * * * * * * * * * *
+                                              * *                                 * *
+                                              * *           MSC Software          * *
+                                              * *               CORP              * *
+                                              * *                                 * *
+                                              * *      M S C   N a s t r a n      * *
+                                              * *                                 * *
+                                              * *                                 * *
+                                              * *                                 * *
+                                              * *     Version 2017.0.0-CL450664   * *
+                                              * *                                 * *
+                                              * *                                 * *
+                                              * *                                 * *
+                                              * *          NOV 19, 2016           * *
+                                              * *                                 * *
+                                              * *              Intel              * *
+                                              * *MODEL P5-4/6810 (USPBY1SLE2D8390 * *
+                                              * * Windows 10 Enterprise 6.2 9200  * *
+                                              * * Compiled for 8664 (SINGLE Mode) * *
+                                              * *                                 * *
+                                              * * * * * * * * * * * * * * * * * * * *
+                                              * * * * * * * * * * * * * * * * * * * *
+1News file - (September 29, 2016):
+  
+               Welcome to MSC Nastran 2017
+  
+  
+   Details of the new capabilities can be found in the MSC Nastran 2017
+     Release Guide available online in the installation documentation
+     sub-directory.
+   Additional information can be found at the MSC Nastran Product Support page:
+  
+      http://simcompanion.mscsoftware.com
+  
+  
+   The support page provides links to these valuable information:
+      * A searchable Knowledge Base containing examples and answers to thousands
+        of frequently asked questions written by MSC Software subject-matter
+        experts.
+      * Peer-to-peer Discussion Forums enabling you to post questions for your
+        MSC Software products and receive answers from other users worldwide.
+      * A list of known issues with the product and any workarounds.
+      * Instructions on how to contact technical support
+      * A mechanism for sending us product feedback or enhancement requests.
+      * Hardware and software requirements.
+      * Examples and Tutorials
+      * and much more.
+  
+   For information on training, please visit our Training web site
+  
+      http://www.mscsoftware.com/Contents/Services/Training/
+  
+   MSC Nastran brings powerful new features and enhancements for engineering
+   solutions.
+  
+  
+      HPC
+      -  New ACMS method now supports External Superelement and Adams MNF
+           creation.
+      -  New ACMS method shows reduced memory requirements, in particular,
+           for solid element models.
+      -  A new method has been introduced to improve the robustnessof AUTOMSET.
+      -  Automatic DMP support for fluid eigensolution problem.
+  
+      Acoustics
+      -  A capability called PEAKOUT has been introduced to calculate the
+           acoustic participation factors at the peaks of the frequency
+           response.
+      -  A new process is available to provide a confidence band associated with
+           mid frequency for FRFs (frequency response) when modeling
+           uncertainties exist in the stiffness, mass and/or damping in the
+           mid-frequency range (300Hz - 1500Hz).
+1 
+      Embedded-Fatigue
+      -  Capability has been extended for fatigue analysis in the (vibratory)
+           frequency domain.
+  
+      Optimization
+      -  MSC Nastran Embedded Vibratory Fatigue may be used as an objective or
+           constraint in an optimization simulation. This is not available
+           for topology optimization.
+      -  Topology optimization may now be used to minimize mass under stress
+           constraints for solid elements
+      - A new manufacturing constraint to control maximum member size in
+           topology optimization has been introduced
+  
+      Rotordynamics
+      -  New methods options are available for defining different WR3/WR4
+           damping for rotordynamics for individual rotors.
+      -  CAMPBELL plots are now available in Sol 110.
+      -  2D and 3D Rotors are now supported in SOL 110 and SOL 111.
+  
+      Implicit Nonlinear Analysis - SOL 400
+      -  The Anand solder model has been added, this may also be used for
+           creep analysis.
+      -  The segment-to-segment method has been enhanced.
+      -  Cohesive contact has been introduced to allow user defined normal
+           and tangential contact stiffness.
+  
+      Results Database
+      -  Additional data blocks have been added to the HDF5 file.
+      -  The intermediate HDF5 is supported through OUTCTRL keyword in NLOPRM
+           which allows viewing of the results during the calculation.
+  
+     Documentation
+  
+     The complete documentation set is provided in a separate installer and
+     when installed is available at:
+     MSC_DOC_DIR/doc/pdf_nastran directory.
+     Where MSC_DOC_DIR is the directory where documentation was installed
+     This help set has cross references between documents, links to how-to
+     videos, and example files.
+  
+     Individual MSC Nastran documents are available for download from the
+       Simcompanion Website at:
+       http://simcompanion.mscsoftware.com/
+  
+     These documents were updated for the MSC Nastran 2017 Release
+  
+         1.  MSC Nastran 2017 Installation and Operations Guide
+         2.  MSC Nastran 2017 Quick Reference Guide
+         3.  MSC Nastran 2017 Release Guide
+1        4.  MSC Nastran 2017 Linear Statics Analysis User's Guide
+         5.  MSC Nastran 2017 Dynamic Analysis User's Guide
+         6.  MSC Nastran 2017 Superelements User's Guide
+         7.  MSC Nastran 2017 Rotordynamics User's Guide
+         8.  MSC Nastran 2017 Demonstration Problems Manual
+         9.  MSC Nastran 2017 Nastran Embedded Fatigue User's Guide
+        10.  MSC Nastran 2017 Design Sensitivity and Optimization
+        11.  MSC Nastran 2017 Nonlinear User's Guide SOL 400
+        12.  MSC Nastran 2017 DMAP Programmer's Guide
+  
+    The following is a new manual for the MSC Nastrans 2017 Release
+  
+         1. MSC Nastran 2017 Nastran Embedded Vibration Fatigue User's Guide
+  
+  
+    Please refer to:
+  
+    MSC_DOC_DIR/doc/pdf_nastran/nastran_library.pdf
+  
+1                                                                             APRIL  21, 2019  MSC Nastran 11/19/16   PAGE     1
+                                                                                                                                    
+0        N A S T R A N    F I L E    A N D    S Y S T E M    P A R A M E T E R    E C H O                                           
+0                                                                                                                                   
+                                                                                                                                    
+                                                                                                                                    
+     $ SYSFIELD=SCR*(RAW=YES,BUFFIO=YES,WNUM=16,WSIZE=16MB) $(C:/MSC/NASTRAN20170/CON
+     $ SYSFIELD=DBALL(RAW=YES,BUFFIO=YES,WNUM=16,WSIZE=16MB) $(C:/MSC/NASTRAN20170/CO
+     NASTRAN BUFFSIZE=32769 $(C:/MSC/NASTRAN20170/CONF/NAST20170.RCF[5])             
+     INIT MASTER(S)                                                                  
+     NASTRAN OP2NEW=0,SYSTEM(319)=1                                                  
+1                                                                             APRIL  21, 2019  MSC Nastran 11/19/16   PAGE     2
+                                                                                                                                    
+0        N A S T R A N    E X E C U T I V E    C O N T R O L    E C H O                                                             
+0                                                                                                                                   
+                                                                                                                                    
+                                                                                                                                    
+     ID PLATE,FEMAP                                                                          
+     SOL SESTATIC                                                                            
+     CEND                                                                                    
+1    STATIC_TEST                                                              APRIL  21, 2019  MSC Nastran 11/19/16   PAGE     3
+                                                                                                                                    
+0                                                                                                                                   
+0                                        C A S E    C O N T R O L    E C H O                                                        
+                 COMMAND                                                                                                            
+                 COUNT                                                                                                              
+                  1        TITLE = STATIC_TEST                                                                   
+                  2        ECHO = NONE                                                                           
+                  3        DISPLACEMENT = ALL                                                                    
+                  4        SPCFORCE = ALL                                                                        
+                  5        OLOAD = ALL                                                                           
+                  6        FORCE(CORNER) = ALL                                                                   
+                  7        STRESS(CORNER) = ALL                                                                  
+                  8        STRAIN(FIBER,CORNER) = ALL                                                            
+                  9        SPC = 1                                                                               
+                 10        LOAD = 1                                                                              
+                 11      BEGIN BULK                                                                              
+1    STATIC_TEST                                                              APRIL  21, 2019  MSC Nastran 11/19/16   PAGE     4
+                                                                                                                                    
+0                                                                                                                                   
+                                        M O D E L   S U M M A R Y          BULK = 0
+                                   ENTRY NAME        NUMBER OF ENTRIES
+                                   ----------        -----------------
+                                       CORD2C                        1
+                                       CORD2S                        1
+                                       CQUAD4                        1
+                                        FORCE                        2
+                                         GRID                        4
+                                         MAT1                        1
+                                         MAT4                        1
+                                        PARAM                        3
+                                       PSHELL                        1
+                                         SPC1                        1
+
+ ^^^     
+ ^^^ >>> IFP OPERATIONS COMPLETE <<< 
+ ^^^     
+1    STATIC_TEST                                                              APRIL  21, 2019  MSC Nastran 11/19/16   PAGE     5
+                                                                                                                                    
+0                                                                                                                                   
+                           O U T P U T   F R O M   G R I D   P O I N T   W E I G H T   G E N E R A T O R
+0                                                     REFERENCE POINT =        0
+                                                                M O
+                      *  3.587500E-02  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00 -1.793750E-02 *
+                      *  0.000000E+00  3.587500E-02  0.000000E+00  0.000000E+00  0.000000E+00  1.793750E-02 *
+                      *  0.000000E+00  0.000000E+00  3.587500E-02  1.793750E-02 -1.793750E-02  0.000000E+00 *
+                      *  0.000000E+00  0.000000E+00  1.793750E-02  1.793750E-02 -8.968750E-03  0.000000E+00 *
+                      *  0.000000E+00  0.000000E+00 -1.793750E-02 -8.968750E-03  1.793750E-02  0.000000E+00 *
+                      * -1.793750E-02  1.793750E-02  0.000000E+00  0.000000E+00  0.000000E+00  3.587500E-02 *
+                                                                 S
+                                           *  1.000000E+00  0.000000E+00  0.000000E+00 *
+                                           *  0.000000E+00  1.000000E+00  0.000000E+00 *
+                                           *  0.000000E+00  0.000000E+00  1.000000E+00 *
+                               DIRECTION
+                          MASS AXIS SYSTEM (S)     MASS              X-C.G.        Y-C.G.        Z-C.G.
+                                  X            3.587500E-02      0.000000E+00  5.000000E-01  0.000000E+00
+                                  Y            3.587500E-02      5.000000E-01  0.000000E+00  0.000000E+00
+                                  Z            3.587500E-02      5.000000E-01  5.000000E-01  0.000000E+00
+                                                                I(S)
+                                           *  8.968750E-03  1.734723E-18  0.000000E+00 *
+                                           *  1.734723E-18  8.968750E-03  0.000000E+00 *
+                                           *  0.000000E+00  0.000000E+00  1.793750E-02 *
+                                                                I(Q)
+                                           *  8.968750E-03                             *
+                                           *                8.968750E-03               *
+                                           *                              1.793750E-02 *
+                                                                 Q
+                                           *  1.000000E+00  0.000000E+00  0.000000E+00 *
+                                           *  0.000000E+00  1.000000E+00  0.000000E+00 *
+                                           *  0.000000E+00  0.000000E+00  1.000000E+00 *
+
+1    STATIC_TEST                                                              APRIL  21, 2019  MSC Nastran 11/19/16   PAGE     6
+                                                                                                                                    
+0                                                                                                                                   
+1    STATIC_TEST                                                              APRIL  21, 2019  MSC Nastran 11/19/16   PAGE     7
+                                                                                                                                    
+0                                                                                                                                   
+0 RESULTANTS ABOUT ORIGIN OF SUPERELEMENT BASIC COORDINATE SYSTEM IN SUPERELEMENT BASIC SYSTEM COORDINATES.
+
+0                                                  OLOAD    RESULTANT       
+  SUBCASE/    LOAD
+  DAREA ID    TYPE       T1            T2            T3            R1            R2            R3
+0        1     FX    2.000000E+02     ----          ----          ----       0.000000E+00 -1.000000E+02                             
+               FY       ----       0.000000E+00     ----       0.000000E+00     ----       0.000000E+00                             
+               FZ       ----          ----       0.000000E+00  0.000000E+00  0.000000E+00     ----                                  
+               MX       ----          ----          ----       0.000000E+00     ----          ----                                  
+               MY       ----          ----          ----          ----       0.000000E+00     ----                                  
+               MZ       ----          ----          ----          ----          ----       0.000000E+00                             
+             TOTALS  2.000000E+02  0.000000E+00  0.000000E+00  0.000000E+00  0.000000E+00 -1.000000E+02
+1    STATIC_TEST                                                              APRIL  21, 2019  MSC Nastran 11/19/16   PAGE     8
+                                                                                                                                    
+0                                                                                                                                   
+  
+ *** SYSTEM INFORMATION MESSAGE 4159 (DFMSA)
+     THE DECOMPOSITION OF KLL      YIELDS A MAXIMUM MATRIX-TO-FACTOR-DIAGONAL RATIO OF    7.259002E+00
+ *** USER INFORMATION MESSAGE 5293 (SSG3A)
+    FOR DATA BLOCK KLL     
+    LOAD SEQ. NO.             EPSILON              EXTERNAL WORK      EPSILONS LARGER THAN 0.001 ARE FLAGGED WITH ASTERISKS
+    User information:
+    One line of output is printed for each static loading condition.
+    Small values of EPSILON are due to accumulated round-off error. Large
+    values of EPSILON indicate possible singularities in the stiffness
+    matrix.  See Section 9.5.1.
+                1         -1.1050545E-17          5.3661799E-03
+1    STATIC_TEST                                                              APRIL  21, 2019  MSC Nastran 11/19/16   PAGE     9
+                                                                                                                                    
+0                                                                                                                                   
+0 RESULTANTS ABOUT ORIGIN OF SUPERELEMENT BASIC COORDINATE SYSTEM IN SUPERELEMENT BASIC SYSTEM COORDINATES.
+
+0                                                  SPCFORCE RESULTANT       
+  SUBCASE/    LOAD
+  DAREA ID    TYPE       T1            T2            T3            R1            R2            R3
+0        1     FX   -2.000000E+02     ----          ----          ----       0.000000E+00  1.000000E+02                             
+               FY       ----       1.776357E-14     ----       0.000000E+00     ----       0.000000E+00                             
+               FZ       ----          ----       0.000000E+00  0.000000E+00  0.000000E+00     ----                                  
+               MX       ----          ----          ----       0.000000E+00     ----          ----                                  
+               MY       ----          ----          ----          ----       0.000000E+00     ----                                  
+               MZ       ----          ----          ----          ----          ----       5.421011E-19                             
+             TOTALS -2.000000E+02  1.776357E-14  0.000000E+00  0.000000E+00  0.000000E+00  1.000000E+02
+1    STATIC_TEST                                                              APRIL  21, 2019  MSC Nastran 11/19/16   PAGE    10
+                                                                                                                                    
+0                                                                                                                                   
+ 
+                                             D I S P L A C E M E N T   V E C T O R
+ 
+      POINT ID.   TYPE          T1             T2             T3             R1             R2             R3
+             1      G      0.0            0.0            0.0            0.0            0.0            0.0
+             2      G      5.366180E-05   1.278332E-05   0.0            0.0            0.0            6.391661E-06
+             3      G      5.366180E-05  -1.278332E-05   0.0            0.0            0.0           -6.391661E-06
+             4      G      0.0            0.0            0.0            0.0            0.0            0.0
+1    STATIC_TEST                                                              APRIL  21, 2019  MSC Nastran 11/19/16   PAGE    11
+                                                                                                                                    
+0                                                                                                                                   
+ 
+                                                     L O A D   V E C T O R
+ 
+      POINT ID.   TYPE          T1             T2             T3             R1             R2             R3
+             2      G      1.000000E+02   0.0            0.0            0.0            0.0            0.0
+             3      G      1.000000E+02   0.0            0.0            0.0            0.0            0.0
+1    STATIC_TEST                                                              APRIL  21, 2019  MSC Nastran 11/19/16   PAGE    12
+                                                                                                                                    
+0                                                                                                                                   
+ 
+                               F O R C E S   O F   S I N G L E - P O I N T   C O N S T R A I N T
+ 
+      POINT ID.   TYPE          T1             T2             T3             R1             R2             R3
+             1      G     -1.000000E+02  -1.550067E+01   0.0            0.0            0.0           -8.873919E-04
+             4      G     -1.000000E+02   1.550067E+01   0.0            0.0            0.0            8.873919E-04
+1    STATIC_TEST                                                              APRIL  21, 2019  MSC Nastran 11/19/16   PAGE    13
+                                                                                                                                    
+0                                                                                                                                   
+ 
+
+                          F O R C E S   I N   Q U A D R I L A T E R A L   E L E M E N T S   ( Q U A D 4 )        OPTION = BILIN  
+ 
+    ELEMENT                    - MEMBRANE  FORCES -                      - BENDING   MOMENTS -            - TRANSVERSE SHEAR FORCES -
+      ID       GRID-ID     FX            FY            FXY           MX            MY            MXY           QX            QY
+0         1    CEN/4  2.000000E+02  1.550067E+01  1.243450E-14  0.0           0.0           0.0           0.0           0.0
+                   4  2.000000E+02  6.200000E+01  3.552714E-15  0.0           0.0           0.0           0.0           0.0
+                   3  2.000000E+02 -3.099867E+01  1.243450E-14  0.0           0.0           0.0           0.0           0.0
+                   2  2.000000E+02 -3.099867E+01  2.131628E-14  0.0           0.0           0.0           0.0           0.0
+                   1  2.000000E+02  6.200000E+01  1.598721E-14  0.0           0.0           0.0           0.0           0.0
+1    STATIC_TEST                                                              APRIL  21, 2019  MSC Nastran 11/19/16   PAGE    14
+                                                                                                                                    
+0                                                                                                                                   
+ 
+                           S T R A I N S   I N   Q U A D R I L A T E R A L   E L E M E N T S   ( Q U A D 4 )        OPTION = BILIN  
+ 
+    ELEMENT              FIBER             STRAINS IN ELEMENT COORD SYSTEM         PRINCIPAL  STRAINS (ZERO SHEAR)               
+      ID      GRID-ID   DISTANCE        NORMAL-X      NORMAL-Y      SHEAR-XY      ANGLE        MAJOR         MINOR       VON MISES 
+0         1    CEN/4  -6.250000E-02   5.366180E-05 -1.278332E-05  1.101143E-20     0.0000   5.366180E-05 -1.278332E-05  4.071024E-05
+                       6.250000E-02   5.366180E-05 -1.278332E-05  1.101143E-20     0.0000   5.366180E-05 -1.278332E-05  4.071024E-05
+
+                   4  -6.250000E-02   4.969897E-05  2.838468E-21  5.082198E-21     0.0000   4.969897E-05  0.0           3.313265E-05
+                       6.250000E-02   4.969897E-05  2.838468E-21  5.082198E-21     0.0000   4.969897E-05  0.0           3.313265E-05
+
+                   3  -6.250000E-02   5.762463E-05 -2.556664E-05  1.101143E-20     0.0000   5.762463E-05 -2.556664E-05  4.920488E-05
+                       6.250000E-02   5.762463E-05 -2.556664E-05  1.101143E-20     0.0000   5.762463E-05 -2.556664E-05  4.920488E-05
+
+                   2  -6.250000E-02   5.762463E-05 -2.556664E-05  1.694066E-20     0.0000   5.762463E-05 -2.556664E-05  4.920488E-05
+                       6.250000E-02   5.762463E-05 -2.556664E-05  1.694066E-20     0.0000   5.762463E-05 -2.556664E-05  4.920488E-05
+
+                   1  -6.250000E-02   4.969897E-05  2.838468E-21  1.439956E-20     0.0000   4.969897E-05  0.0           3.313265E-05
+                       6.250000E-02   4.969897E-05  2.838468E-21  1.439956E-20     0.0000   4.969897E-05  0.0           3.313265E-05
+
+1    STATIC_TEST                                                              APRIL  21, 2019  MSC Nastran 11/19/16   PAGE    15
+                                                                                                                                    
+0                                                                                                                                   
+ 
+                         S T R E S S E S   I N   Q U A D R I L A T E R A L   E L E M E N T S   ( Q U A D 4 )        OPTION = BILIN  
+ 
+    ELEMENT              FIBER            STRESSES IN ELEMENT COORD SYSTEM         PRINCIPAL STRESSES (ZERO SHEAR)               
+      ID      GRID-ID   DISTANCE        NORMAL-X      NORMAL-Y      SHEAR-XY      ANGLE        MAJOR         MINOR       VON MISES 
+0         1    CEN/4  -6.250000E-02   1.600000E+03  1.240053E+02  9.947598E-14     0.0000   1.600000E+03  1.240053E+02  1.541742E+03
+                       6.250000E-02   1.600000E+03  1.240053E+02  9.947598E-14     0.0000   1.600000E+03  1.240053E+02  1.541742E+03
+
+                   4  -6.250000E-02   1.600000E+03  4.960000E+02  2.842171E-14     0.0000   1.600000E+03  4.960000E+02  1.418596E+03
+                       6.250000E-02   1.600000E+03  4.960000E+02  2.842171E-14     0.0000   1.600000E+03  4.960000E+02  1.418596E+03
+
+                   3  -6.250000E-02   1.600000E+03 -2.479894E+02  9.947598E-14     0.0000   1.600000E+03 -2.479894E+02  1.737320E+03
+                       6.250000E-02   1.600000E+03 -2.479894E+02  9.947598E-14     0.0000   1.600000E+03 -2.479894E+02  1.737320E+03
+
+                   2  -6.250000E-02   1.600000E+03 -2.479894E+02  1.705303E-13     0.0000   1.600000E+03 -2.479894E+02  1.737320E+03
+                       6.250000E-02   1.600000E+03 -2.479894E+02  1.705303E-13     0.0000   1.600000E+03 -2.479894E+02  1.737320E+03
+
+                   1  -6.250000E-02   1.600000E+03  4.960000E+02  1.278977E-13     0.0000   1.600000E+03  4.960000E+02  1.418596E+03
+                       6.250000E-02   1.600000E+03  4.960000E+02  1.278977E-13     0.0000   1.600000E+03  4.960000E+02  1.418596E+03
+
+1    STATIC_TEST                                                              APRIL  21, 2019  MSC Nastran 11/19/16   PAGE    16
+                                                                                                                                    
+0                                                                                                                                   
+ * * * *  D B D I C T   P R I N T  * * * *      SUBDMAP = PRTSUM  ,  DMAP STATEMENT NO.     71
+
+
+
+0                                   * * * *  A N A L Y S I S  S U M M A R Y  T A B L E  * * * *
+0 SEID  PEID PROJ VERS APRCH      SEMG SEMR SEKR SELG SELR MODES DYNRED SOLLIN PVALID SOLNL LOOPID DESIGN CYCLE SENSITIVITY
+ --------------------------------------------------------------------------------------------------------------------------
+     0     0    1    1 '        '    T    T    T    T    T     F      F      T      0     F     -1            0           F
+0SEID = SUPERELEMENT ID.
+ PEID = PRIMARY SUPERELEMENT ID OF IMAGE SUPERELEMENT.
+ PROJ = PROJECT ID NUMBER.
+ VERS = VERSION ID.
+ APRCH = BLANK FOR STRUCTURAL ANALYSIS.  HEAT FOR HEAT TRANSFER ANALYSIS.
+ SEMG = STIFFNESS AND MASS MATRIX GENERATION STEP.
+ SEMR = MASS MATRIX REDUCTION STEP (INCLUDES EIGENVALUE SOLUTION FOR MODES).
+ SEKR = STIFFNESS MATRIX REDUCTION STEP.
+ SELG = LOAD MATRIX GENERATION STEP.
+ SELR = LOAD MATRIX REDUCTION STEP. 
+ MODES = T (TRUE) IF NORMAL MODES OR BUCKLING MODES CALCULATED.
+ DYNRED = T (TRUE) MEANS GENERALIZED DYNAMIC AND/OR COMPONENT MODE REDUCTION PERFORMED.
+ SOLLIN = T (TRUE) IF LINEAR SOLUTION EXISTS IN DATABASE.
+ PVALID = P-DISTRIBUTION ID OF P-VALUE FOR P-ELEMENTS
+ LOOPID = THE LAST LOOPID VALUE USED IN THE NONLINEAR ANALYSIS.  USEFUL FOR RESTARTS.
+ SOLNL = T (TRUE) IF NONLINEAR SOLUTION EXISTS IN DATABASE.
+ DESIGN CYCLE = THE LAST DESIGN CYCLE (ONLY VALID IN OPTIMIZATION).
+ SENSITIVITY = SENSITIVITY MATRIX GENERATION FLAG.
+ 
+ No PARAM values were set in the Control File.
+ 
+1                                        * * * END OF JOB * * *
+ 
+ 
+ No Symbolic Replacement variables or values were specified.
+

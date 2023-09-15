@@ -1,0 +1,154 @@
+MSC Nastran V2017.0 (Intel Windows 10 Enterprise 6.2 9200) Control File: 
+----------------------------------------------------------------- 
+$ sysfield=SCR*(RAW=YES,BUFFIO=YES,wnum=16,wsize=16mb) $(c:/msc/nastran20170/conf/nast20170.rcf[1])
+$ sysfield=DBALL(RAW=YES,BUFFIO=YES,wnum=16,wsize=16mb) $(c:/msc/nastran20170/conf/nast20170.rcf[2])
+Nastran BUFFSIZE=32769 $(c:/msc/nastran20170/conf/nast20170.rcf[5])
+JID='c:/users/fschwa02/desktop/dynamics_learning/1.nas'
+OUT='c:/users/fschwa02/desktop/dynamics_learning/1'
+MEM=1069744128      $ WORDS
+MACH='Intel'
+OPER='Windows 10 Enterprise'
+OSV='6.2 9200'
+MODEL='P5-4/5425 (USPBY1SLE2D8390)'
+NPROC='8'
+CONFIG=15
+NPROC=8
+symbol=DELDIR='c:/msc/nastran20170/msc20170/nast/del' $(program default)
+symbol=DEMODIR='c:/msc/nastran20170/msc20170/nast/demo' $(program default)
+symbol=LM_NO_SNMP=1 $(c:/msc/nastran20170/conf/nast20170.rcf[8])
+symbol=SSSALTERDIR='c:/msc/nastran20170/msc20170/nast/sssalter' $(program default)
+symbol=TPLDIR='c:/msc/nastran20170/msc20170/nast/tpl' $(program default)
+SDIR='c:/scratch/1.T31796_8'
+DBS='c:/scratch/1.T31796_8'
+SCR='yes'
+SMEM=100
+BPOOL=2040.4MB
+DMPMEM=estimate
+NEWDEL='c:/msc/nastran20170/msc20170/win64i8/sss'
+DEL='MSCDEF'
+DML=MSCDEF
+SDL=MSCDEF
+AUTH='1739@USMLB1WANLIC1P'
+AUTHQUE=20
+MSGCAT='c:/msc/nastran20170/msc20170/win64i8/analysis.msg'
+MSGDEST='f06'
+NEWS='c:/msc/nastran20170/msc20170/nast/news.txt'
+----------------------------------------------------------------- 
+MSC_ISHELLPATH=C:\MSC\Nastran20170\msc20170\actran\win64\Actran_17.1.b.97631\bin;C:\MSC\Nastran20170\msc20170\nast; 
+MSC_JIDPATH= 
+PATH=c:\msc\nastran20170\msc20170\win64i8;c:\msc\nastran20170\msc20170\win64i8\nCode\bin;c:\msc\nastran20170\msc20170\win64i8\nvidia;c:\msc\nastran20170\msc20170\win64i8\lib;c:\msc\nastran20170\msc20170\win64i8;C:\Program Files\Microsoft MPI\Bin\;C:\Program Files (x86)\Python36-32\Scripts\;C:\Program Files (x86)\Python36-32\;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\MATLAB\R2016b\runtime\win64;C:\Program Files\MATLAB\R2016b\bin;C:\MSC\Adams2017_2\bin;C:\Program Files\ServiceNow;C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;C:\Users\fschwa02\AppData\Local\Microsoft\WindowsApps;C:\Users\fschwa02\AppData\Local\atom\bin 
+SCA_SERVICE_CATALOG=c:\msc\nastran20170\msc20170\res\SCAServiceCatalog.xml 
+SCA_RESOURCE_DIR=c:\msc\nastran20170\msc20170\res 
+Cmd Line:    C:\MSC\Nastran20170\msc20170\win64i8\nastran.exe C:\Users\fschwa02\Desktop\Dynamics_Learning\1.nas bat=no out=C:\Users\fschwa02\Desktop\Dynamics_Learning\ scr=yes 
+Current Dir: C:\Users\fschwa02\Desktop\Y-Vibe Recorrelation Study 
+Time Cmd:    c:\msc\nastran20170\msc20170\win64i8\msctime 
+Executable:  c:\msc\nastran20170\msc20170\win64i8\analysis.exe 
+Arch= Kywd:  [Not specified]  
+MSC_MSG:     stderr  
+FPE:         yes  
+----------------------------------------------------------------- 
+Current resource limits:
+ Physical memory:                    16323 MB
+ Physical memory available:          10193 MB
+ Paging file size:                   25108 MB
+ Paging file size available:         17459 MB
+ Virtual memory:                 134217727 MB
+ Virtual memory available:       134217601 MB
+----------------------------------------------------------------- 
+System configuration:
+ Hostname:         USPBY1SLE2D8390.cs.myharris.net
+ Architecture:     win64i8
+ Platform:         Intel Windows 10 Enterprise 6.2 9200 (Windows Compute Cluster)
+ Model:            P5-4/6681
+ Clock freq.:      6667 MHz
+ Number of CPUs:   8
+ Executable:       standard
+ Raw model ID:     15
+ Config number:    15
+ Physical memory:  16323 MB
+ Virtual memory:   25108 MB
+ Numeric format:   64-bit little-endian IEEE.
+ Bytes per word:   8
+ Disk block size:  512 bytes (64 words)
+ Remote shell cmd: "c:/msc/nastran20170/msc20170/win64i8/mscrmtcmd.exe" (Windows non-CCS nodes, UNIX)
+                   <ccs_cmd> (Windows CCS nodes)
+----------------------------------------------------------------- 
+MSC Nastran started  Tue Sep 24 08:22:09 EDT 2019 
+ 08:22:20  Beginning Analysis
+SCA Kernel 18.3.439984 successfully initialized
+BLAS/LAPACK .dll "c:\msc\nastran20170\msc20170\win64i8\libimalloc.dll" has been loaded.
+BLAS/LAPACK .dll "c:\msc\nastran20170\msc20170\win64i8\mkl_core.dll" has been loaded.
+BLAS/LAPACK .dll "c:\msc\nastran20170\msc20170\win64i8\mkl_intel_thread.dll" has been loaded.
+BLAS/LAPACK .dll "c:\msc\nastran20170\msc20170\win64i8\mkl_rt.dll" has been loaded.
+BLAS/LAPACK .dll "c:\msc\nastran20170\msc20170\win64i8\MSCblas.dll" has been loaded.
+
+ 08:22:21  MSC Authorization Information - System Attributes (1004, 0)
+ 08:22:21  -----------------------------------------------------------
+  Date:          Tue Sep 24 08:22:21 2019
+  MSC Id:        ecf4bb55f0ef (ethernet) (Intel)
+  Hostname:      USPBY1SLE2D8390 (user fschwa02, display USPBY1SLE2D8390)
+  License files: 1739@USMLB1WANLIC1P
+  CEID:          5682092B-4696714F
+  User:          fschwa02
+  Display:       USPBY1SLE2D8390
+  LAPI Version:  LAPI 10.1.8-3298 (FLEXlm 11.9.0.0)
+
+  * * * * * * * * * * * * * * * * * * * *
+  * * * * * * * * * * * * * * * * * * * *
+  * *                                 * *
+  * *   MSC Customer Entitlement ID   * *
+  * *        5682092B-4696714F        * *
+  * *                                 * *
+  * * * * * * * * * * * * * * * * * * * *
+  * * * * * * * * * * * * * * * * * * * *
+
+ 08:22:21  MSC Authorization Information - Checkout Successful (1016, 0)
+ 08:22:21  -------------------------------------------------------------
+ 08:22:21  Acquired 13 licenses for Group MSCONE (MSC Nastran) from license server on host USMLB1WANLIC1P
+
+
+Beginning bulk data processing using the IFPStar component.
+For more information on IFPStar, please see KB article KB8019200
+on our support pages, at http://simcompanion.mscsoftware.com.
+
+ 08:22:21  50 records read from JID file "c:/users/fschwa02/desktop/dynamics_learning/1.nas"
+
+Processing of bulk data entries is complete.
+
+ 08:22:21  Analysis started.
+ 08:22:21  Geometry access/verification to CAD part initiated (if needed).
+ 08:22:21  Geometry access/verification to CAD part successfully completed (if needed).
+ 08:22:21  Finite element model generation started.
+ 08:22:22  Finite element model generated 12 degrees of freedom.
+ 08:22:22  Finite element model generation successfully completed.
+ 08:22:22  Application of Loads and Boundary Conditions to the finite element model started.
+ 08:22:22  Application of Loads and Boundary Conditions to the finite element model successfully completed.
+ 08:22:22  Solution of the system equations for normal modes started.
+ 08:22:22  Solution of the system equations for normal modes successfully completed.
+ 08:22:22  Normal modes analysis completed.
+ 08:22:22  12 records read from JID file "c:/users/fschwa02/desktop/dynamics_learning/1.nas"
+ 08:22:22  NSEXIT: EXIT(0)
+ 08:22:22  Analysis complete  0
+Real:        1.928 seconds ( 0:00:01.928)
+User:        0.750 seconds ( 0:00:00.750)
+Sys:         1.093 seconds ( 0:00:01.093)
+ ==================================================
+ OS:              6.2
+ OEM ID:         9
+ Number of processors:         8
+ Page size:         4096
+ Processor type:         8664
+ Minimum application address:         10000
+ Maximum application address:         fffeffff
+ Active processor mask:         255
+ Nsocket:         1
+ Ncore:           8  ( 1 X 8 )
+ HyperThreading:  On
+ Ram:          16323 Mb
+ ==================================================
+ Time Summary                 CPU       Wall   ( Time in Seconds )
+ ==================================================
+ Detailed performance studies can be found at:
+ https://simcompanion.mscsoftware.com/infocenter/index?page=content&id=S:KB8022065&actp=LIST 
+ ==================================================
+MSC Nastran finished Tue Sep 24 08:22:24 EDT 2019 
