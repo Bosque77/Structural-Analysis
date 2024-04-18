@@ -1,5 +1,3 @@
-!Isolate_Joint_Elements/Isolate_Joint_Elements.vb
-!Isolate_Part/Isolate_Part.vb
 *venv
 *FEA_Model_Examples
 *bin
@@ -7,3 +5,5 @@
 *.vs
 femap_library/Isolate_Joint_Elements/*
 femap_library/Isolate_Part/*
+!femap_library/Isolate_Joint_Elements/Isolate_Joint_Elements.vb
+!femap_library/Isolate_Part/Isolate_Part.vb
