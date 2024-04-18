@@ -1,12 +1,9 @@
+!Isolate_Joint_Elements/Isolate_Joint_Elements.vb
+!Isolate_Part/Isolate_Part.vb
 *venv
 *FEA_Model_Examples
 *bin
 *obj
 *.vs
-femap_library/femap_library/My Project/Application.Designer.vb
-femap_library/femap_library/My Project/Application.myapp
-femap_library/femap_library/My Project/AssemblyInfo.vb
-femap_library/femap_library/My Project/Resources.Designer.vb
-femap_library/femap_library/My Project/Resources.resx
-femap_library/femap_library/My Project/Settings.Designer.vb
-femap_library/femap_library/My Project/Settings.settings
+femap_library/Isolate_Joint_Elements/*
+femap_library/Isolate_Part/*
