@@ -3,7 +3,9 @@
 *bin
 *obj
 *.vs
+femap_library/Isolate_Joints_in_Group/*
 femap_library/Isolate_Joint_Elements/*
 femap_library/Isolate_Part/*
 !femap_library/Isolate_Joint_Elements/Isolate_Joint_Elements.vb
 !femap_library/Isolate_Part/Isolate_Part.vb
+!femap_library/Isolate_Joints_in_Group/Isolate_Joints_in_Group.vb
