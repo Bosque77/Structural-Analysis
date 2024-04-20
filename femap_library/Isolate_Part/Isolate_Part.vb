@@ -23,37 +23,41 @@ Module Module1
 
         ' Step 2: Display a prompt for the user to select elements
         Dim selectedElements As femap.Set = femapApp.feSet
-        Dim selectedElement As Int32
-        If selectedElements.SelectID(femap.zDataType.FT_ELEM, "Select elements:", selectedElement) <> femap.zReturnCode.FE_OK Then
+        If selectedElements.Select(femap.zDataType.FT_ELEM, True, "Select elements:") <> femap.zReturnCode.FE_OK Then
             Console.WriteLine("No elements selected or selection cancelled.")
             Return
         End If
 
-        Console.WriteLine("Selected element ID: " & selectedElement)
+        Console.WriteLine("Selected element ID: " & selectedElements.Count)
 
         ' Step 3: Find all connected elements, excluding spring elements
-        Dim connectedElements As femap.Set = femapApp.feSet
-        connectedElements.Add(selectedElement)
+
         Dim springsToRemove As femap.Set = femapApp.feSet
-        Dim previousCount As Integer = 0
-
-        ' Initialize springsToRemove Set
         springsToRemove.AddRule(femap.zElementType.FET_L_SPRING, femap.zGroupDefinitionType.FGD_ELEM_BYTYPE)
+        Dim previousCount As Integer = 0
+        Dim connectedElements As femap.Set = femapApp.feSet
 
-        ' List the number of spring elements to Console
-        Console.WriteLine("Number of spring elements: " & springsToRemove.Count)
+        Dim elementID As Integer
+        elementID = selectedElements.First()
 
+        While elementID > 0
+            connectedElements.Add(elementID)
+            ' Repeat process until no new elements are added to the set
+            Do
+                previousCount = connectedElements.Count
+                connectedElements.AddConnectedElements()
+                connectedElements.RemoveSet(springsToRemove.ID) ' Remove spring elements
+            Loop While connectedElements.Count > previousCount
 
-        ' Repeat process until no new elements are added to the set
-        Do
-            previousCount = connectedElements.Count
-            connectedElements.AddConnectedElements()
-            connectedElements.RemoveSet(springsToRemove.ID) ' Remove spring elements
-        Loop While connectedElements.Count > previousCount
+            ' Get the next element ID
+            elementID = selectedElements.Next()
+
+        End While
 
         ' Step 4: Create a unique group for these elements
+        Dim group_number As Int16 = femapApp.feGroup.NextEmptyID
         Dim resultGroup As femap.group = femapApp.feGroup
-        resultGroup.title = "Isolated Connected Elements"
+        resultGroup.title = "Isolated Connected Elements " + group_number.ToString()
         resultGroup.SetAdd(femap.zDataType.FT_ELEM, connectedElements.ID)
         resultGroup.Put(femapApp.feGroup.NextEmptyID)
         femapApp.feAppMessage(femap.zMessageColor.FCM_NORMAL, "A new group of connected elements has been created.")
