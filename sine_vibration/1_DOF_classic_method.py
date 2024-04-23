@@ -60,25 +60,25 @@ def plot_transmissibility(weight, k, f_range, damping_ratios):
 
 
 
+if __name__ == "__main__":
+    # Example usage:
+    weight = 100  # lbf
+    k = 3000  # lbf/in
 
-# Example usage:
-weight = 1.0  # lbf
-k = 100.0  # lbf/in
 
 
+    w_o = np.sqrt(k / (weight/386.089)) / (2 * np.pi)  # Natural frequency in Hz
 
-w_o = np.sqrt(k / (weight/386.089)) / (2 * np.pi)  # Natural frequency in Hz
+    print(w_o)
 
-print(w_o)
+    f_range = np.linspace(0.1, 300, 500)  # Varying the frequency in Hz
 
-f_range = np.linspace(0.1, 300, 500)  # Varying the frequency in Hz
+    # Damping ratios
+    damping_ratios = [0.03]
 
-# Damping ratios
-damping_ratios = [0.03]
+    # Re-plotting with the corrected mass definition
+    # plt = plot_amplification_damped(weight, k, f_range, damping_ratios)
+    plt = plot_transmissibility(weight, k, f_range, damping_ratios)
 
-# Re-plotting with the corrected mass definition
-# plt = plot_amplification_damped(weight, k, f_range, damping_ratios)
-plt = plot_transmissibility(weight, k, f_range, damping_ratios)
-
-plt.figure
-plt.show()
+    plt.figure
+    plt.show()

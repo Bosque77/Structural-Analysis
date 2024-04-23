@@ -1,0 +1,1542 @@
+1
+ MACHINE                        MODEL                 OPERATING SYSTEM       Simcenter Nastran  BUILD DATE         RUN DATE
+ Intel64 Family 6 Mod           Intel(R) Core(TM) i7  Windows 10             VERSION 1965.0032  FEB 11, 2021       APR 22, 2024
+
+ 
+                            ===    S i m c e n t e r  N a s t r a n   E X E C U T I O N   S U M M A R Y    ===
+
+ Day_Time  Elapsed     I/O_Mb      Del_Mb     CPU_Sec    Del_CPU    Subroutine
+ 
+ 21:47:41     0:00        0.0         0.0         0.0        0.0    SEMTRN   BGN
+ 21:47:41     0:00        0.0         0.0         0.0        0.0    SEMTRN   END
+ 21:47:41     0:00        0.0         0.0         0.0        0.0    DBINIT   BGN
+      ** CURRENT PROJECT ID = ' "BLANK" '  ** CURRENT VERSION ID =          1
+
+     S U M M A R Y   O F   F I L E   A S S I G N M E N T   F O R   T H E   P R I M A R Y   D A T A B A S E     ( DBSNO   1, SCN20.2 )
+
+    ASSIGNED PHYSICAL FILE NAME (/ORIGINAL)      LOGICAL NAME     DBSET        STATUS    BUFFSIZE     CLUSTER SIZE      TIME STAMP
+    ---------------------------------------      ------------     -----        ------    --------     ------------     ------------
+    c:/scratch/frf-001.T15736_41.MASTER          MASTER           MASTER       NEW          32769           1          240422214741
+    c:/scratch/frf-001.T15736_41.DBALL           DBALL            DBALL        NEW          32769           1          240422214742
+    c:/scratch/frf-001.T15736_41.OBJSCR          OBJSCR           OBJSCR       NEW           8193           1          240422214743
+               **** MEM FILE ****                * N/A *          SCRATCH 
+    c:/scratch/frf-001.T15736_41.SCRATCH         SCRATCH          SCRATCH      NEW          32769           1          240422214744
+    c:/scratch/frf-001.T15736_41.SCR300          SCR300           SCRATCH      NEW          32769           1          240422214745
+ 21:47:41     0:00        7.0         7.0         0.0        0.0    DBINIT   END
+ 21:47:41     0:00        7.0         0.0         0.0        0.0    XCSA     BGN
+
+     S U M M A R Y   O F   F I L E   A S S I G N M E N T   F O R   T H E   D E L I V E R Y   D A T A B A S E   ( DBSNO   2, SCN20.2 )
+
+    ASSIGNED PHYSICAL FILE NAME (/ORIGINAL)      LOGICAL NAME     DBSET        STATUS    BUFFSIZE     CLUSTER SIZE      TIME STAMP
+    ---------------------------------------      ------------     -----        ------    --------     ------------     ------------
+    c:/progra~1/.../em64tntl/SSS.MASTERA         MASTERA          MASTER       OLD           8193           1          210211142752
+   /./sss.MASTERA                           
+    c:/progra~1/.../em64tntl/SSS.MSCOBJ          MSCOBJ           MSCOBJ       OLD           8193           1          210211142757
+   /./sss.MSCOBJ                            
+    c:/progra~1/.../em64tntl/SSS.MSCSOU          MSCSOU           MSCSOU       OLD           8193           1          210211142758
+   /./sss.MSCSOU                            
+ 21:47:41     0:00      575.0       568.0         0.1        0.1    XCSA     END
+ 21:47:41     0:00      575.0         0.0         0.1        0.0    CGPI     BGN
+ 21:47:41     0:00      575.0         0.0         0.1        0.0    CGPI     END
+ 21:47:41     0:00      575.0         0.0         0.1        0.0    LINKER   BGN
+ 21:47:41     0:00     1182.0       607.0         0.2        0.1    LINKER   END
+
+                    S U M M A R Y   O F   P H Y S I C A L   F I L E   I N F O R M A T I O N
+
+    ASSIGNED PHYSICAL FILE NAME                                   RECL (BYTES)  MODE  FLAGS  WSIZE  (WNUM)
+    ------------------------------------------------------------  ------------  ----  -----  -------------
+    c:/scratch/frf-001.T15736_41.SCRATCH                                262144   R/W           N/A        
+    c:/scratch/frf-001.T15736_41.OBJSCR                                  65536   R/W           N/A        
+    c:/scratch/frf-001.T15736_41.MASTER                                 262144   R/W           N/A        
+    c:/scratch/frf-001.T15736_41.DBALL                                  262144   R/W           N/A        
+    c:/scratch/frf-001.T15736_41.SCR300                                 262144   R/W           N/A        
+    c:/progra~1/siemens/.../nastran/scnas/em64tntl/SSS.MASTERA           65536   R/O           N/A        
+    c:/progra~1/siemens/.../nastran/scnas/em64tntl/SSS.MSCOBJ            65536   R/O           N/A        
+
+    FLAG VALUES ARE --
+      B   BUFFERED I/O USED TO PROCESS FILE
+      M   FILE MAPPING USED TO PROCESS FILE
+      R   FILE BEING ACCESSED IN 'RAW' MODE
+ 
+    ASSIGNED PHYSICAL FILE NAME                                   LOGICAL   UNIT  STATUS   ACCESS   RECL  FORM    FLAGS
+    ------------------------------------------------------------  --------  ----  -------  ------  -----  ------  -----
+    c:/users/netadmin/.../sine_vibration/1dof_frf/frf-001.f04     LOGFL        4  OLD      SEQ      N/A   FMTD         
+    c:/users/netadmin/.../sine_vibration/1dof_frf/frf-001.f06     PRINT        6  OLD      SEQ      N/A   FMTD         
+    c:/progra~1/siemens/femap2~1.2st/nastran/scnas/nast/news.txt  INCLD1       9  OLD      SEQ      N/A   FMTD      R  
+    c:/users/netadmin/.../sine_vibration/1dof_frf/frf-001.plt     PLOT        14  OLD      SEQ      N/A   UNFMTD       
+    c:/users/netadmin/.../sine_vibration/1dof_frf/frf-001.op2     OP2         12  OLD      SEQ      N/A   UNFMTD       
+    c:/scratch/frf-001.T15736_41.f18                              OUTPUT2     18  UNKNOWN  SEQ      N/A   UNFMTD       
+    c:/scratch/frf-001.T15736_41.f19                              INPUTT4     19  OLD      SEQ      N/A   UNFMTD    R  
+    c:/users/netadmin/.../sine_vibration/1dof_frf/frf-001.f56     F56         56  UNKNOWN  SEQ      N/A   FMTD         
+    c:/scratch/frf-001.T15736_41.sf1                              SF1         93  OLD      SEQ      N/A   UNFMTD   T   
+    c:/scratch/frf-001.T15736_41.sf2                              SF2         94  OLD      SEQ      N/A   UNFMTD   TR  
+    c:/users/.../sine_vibration/1dof_frf/frf-001.s200tmp          S200       112  UNKNOWN  SEQ      N/A   UNFMTD   T   
+    c:/users/.../sine_vibration/1dof_frf/frf-001_sol200.csv       CSV        113  UNKNOWN  SEQ      N/A   FMTD         
+    c:/users/netadmin/.../sine_vibration/1dof_frf/frf-001.pch     PUNCH        7  OLD      SEQ      N/A   FMTD         
+    c:/users/netadmin/.../sine_vibration/1dof_frf/frf-001.xdb     DBC         40  UNKNOWN  DIRECT   1024  UNFMTD       
+    c:/users/netadmin/.../sine_vibration/1dof_frf/frf-001.asm     ASSEM       16  OLD      SEQ      N/A   FMTD         
+
+    FLAG VALUES ARE --
+      A   FILE HAS BEEN DEFINED BY AN 'ASSIGN' STATEMENT
+      D   FILE IS TO BE DELETED BEFORE RUN, IF IT EXISTS
+      R   FILE IS READ-ONLY
+      T   FILE IS TEMPORARY AND WILL BE DELETED AT END OF RUN
+
+    ** PHYSICAL FILES LARGER THAN 2GB ARE SUPPORTED ON THIS PLATFORM
+ 
+0    ** MASTER DIRECTORIES ARE LOADED IN MEMORY.
+        USER OPENCORE (HICORE)         =   577467855  WORDS
+        EXECUTIVE SYSTEM WORK AREA     =      400175  WORDS
+        MASTER(RAM)                    =      108419  WORDS
+        SCRATCH(MEM) AREA              =   192681720  WORDS (    5880 BUFFERS)
+        BUFFER POOL AREA (GINO/EXEC)   =   192642183  WORDS (    5877 BUFFERS)
+        TOTAL OPEN CORE MEMORY         =   963300352  WORDS
+        TOTAL DYNAMIC MEMORY           =           0  WORDS
+
+        TOTAL NASTRAN MEMORY LIMIT     =   963300352  WORDS
+
+
+ Day_Time  Elapsed     I/O_Mb      Del_Mb     CPU_Sec    Del_CPU    SubDMAP Line (S)SubDMAP/Module
+ 
+ 21:47:41     0:00     1184.0         2.0         0.2        0.0    XSEMDR   BGN
+ 21:47:41     0:00     1186.0         2.0         0.2        0.0    SEDFREQ 134  (S)SUPER1  BEGN    
+ 21:47:41     0:00     1186.0         0.0         0.2        0.0    SUPER1  33   (S)IFPL    BEGN    
+ 21:47:41     0:00     1187.0         1.0         0.2        0.0    IFPL    46      IFP1    BEGN    
+ 21:47:41     0:00     1187.0         0.0         0.2        0.0    IFPL    195     XSORT   BEGN    
+ 21:47:41     0:00     1187.0         0.0         0.2        0.0    IFPL    222     COPY    BEGN    
+ 21:47:41     0:00     1187.0         0.0         0.2        0.0    IFPL    244     FORTIO  BEGN    
+ 21:47:41     0:00     1187.0         0.0         0.2        0.0    IFPL    278  (S)IFPS    BEGN    
+ 21:47:41     0:00     1187.0         0.0         0.2        0.0    IFPS    56      IFP     BEGN    
+ 21:47:41     0:00     1187.0         0.0         0.2        0.0    IFP     
+ *       COUNT:ENTRY          COUNT:ENTRY          COUNT:ENTRY          COUNT:ENTRY          COUNT:ENTRY          COUNT:ENTRY     *
+ *           1:CBUSH              1:CONM2              1:CORD2C             1:CORD2S             1:DLOAD              1:FREQ      *
+ *           1:FREQ1              2:GRID               8:PARAM              1:PBUSH              1:RANDPS             1:RLOAD2    *
+ *           1:SPC1               1:SPCD               1:TABLED2            1:TABRND1 
+ *    PARAM:  AUTOSPC   G         GRDPNT    OGEOM     POST      PRGPST    RPOSTS1   WTMASS                                        *
+ 21:47:41     0:00     1187.0         0.0         0.2        0.0    IFPS    96      GP7     BEGN    
+ 21:47:41     0:00     1187.0         0.0         0.2        0.0    IFPS    258  (S)TESTBIT BEGN    
+ 21:47:41     0:00     1187.0         0.0         0.2        0.0    IFPS    260  (S)TESTBIT BEGN    
+ 21:47:41     0:00     1187.0         0.0         0.2        0.0    IFPS    262  (S)TESTBIT BEGN    
+ 21:47:41     0:00     1187.0         0.0         0.2        0.0    IFPS    285  (S)TESTBIT BEGN    
+ 21:47:41     0:00     1187.0         0.0         0.2        0.0    IFPS    287  (S)TESTBIT BEGN    
+ 21:47:41     0:00     1187.0         0.0         0.2        0.0    IFPS    289  (S)TESTBIT BEGN    
+ 21:47:41     0:00     1187.0         0.0         0.2        0.0    IFPS    291  (S)TESTBIT BEGN    
+ 21:47:41     0:00     1187.0         0.0         0.2        0.0    IFPS    298     CHKPNL  BEGN    
+ 21:47:41     0:00     1187.0         0.0         0.2        0.0    IFPS    299     DMIIN   BEGN    
+ 21:47:41     0:00     1187.0         0.0         0.2        0.0    IFPS    310     DTIIN   BEGN    
+ 21:47:41     0:00     1188.0         1.0         0.2        0.0    IFPS    412  (S)VATVIN  BEGN    
+ 21:47:41     0:00     1188.0         0.0         0.2        0.0    IFPS    419     DTIIN   BEGN    
+ 21:47:41     0:00     1188.0         0.0         0.2        0.0    IFPS    420  (S)MODSETINBEGN    
+ 21:47:41     0:00     1188.0         0.0         0.2        0.0    MODSETIN14   (S)TESTBIT BEGN    
+ 21:47:41     0:00     1188.0         0.0         0.2        0.0    IFPS    422     MODGM2  BEGN    
+ 21:47:41     0:00     1188.0         0.0         0.2        0.0    IFPS    451     PVT     BEGN    
+ 21:47:41     0:00     1188.0         0.0         0.2        0.0    IFPS    541     GP1LM   BEGN    
+ 21:47:41     0:00     1188.0         0.0         0.2        0.0    IFPS    542     GP1     BEGN    
+ 21:47:41     0:00     1194.0         6.0         0.2        0.0    IFPL    283     SEPR1   BEGN    
+ 21:47:41     0:00     1194.0         0.0         0.2        0.0    IFPL    284     DBDELETEBEGN    
+ 21:47:41     0:00     1195.0         1.0         0.2        0.0    IFPL    299     PROJVER BEGN    
+ 21:47:41     0:00     1196.0         1.0         0.2        0.0    IFPL    304     PVT     BEGN    
+ 21:47:41     0:00     1196.0         0.0         0.2        0.0    IFPL    377  (S)IFPS1   BEGN    
+ 21:47:41     0:00     1196.0         0.0         0.2        0.0    IFPS1   15      DTIIN   BEGN    
+ 21:47:41     0:00     1196.0         0.0         0.2        0.0    IFPS1   47      PLTSET  BEGN    
+ 21:47:41     0:00     1196.0         0.0         0.2        0.0    IFPS1   50      MSGHAN  BEGN    
+ 21:47:41     0:00     1196.0         0.0         0.2        0.0    IFPS1   51      MSGHAN  BEGN    
+ 21:47:41     0:00     1196.0         0.0         0.2        0.0    IFPS1   52      GP0     BEGN    
+ 21:47:41     0:00     1196.0         0.0         0.2        0.0    IFPS1   58      MSGHAN  BEGN    
+ 21:47:41     0:00     1196.0         0.0         0.2        0.0    IFPL    379  (S)TESTBIT BEGN    
+ 21:47:41     0:00     1196.0         0.0         0.2        0.0    IFPL    429  (S)TESTBIT BEGN    
+ 21:47:41     0:00     1196.0         0.0         0.2        0.0    SUPER1  51      RSVECEL BEGN    
+ 21:47:41     0:00     1196.0         0.0         0.2        0.0    SUPER1  183  (S)PHASE0  BEGN    
+ 21:47:41     0:00     1196.0         0.0         0.2        0.0    PHASE0  102  (S)PHASE0ACBEGN    
+ 21:47:41     0:00     1196.0         0.0         0.2        0.0    PHASE0AC12   (S)ACTRAP0 BEGN    
+ 21:47:41     0:00     1196.0         0.0         0.2        0.0    ACTRAP0 7    (S)CASEPARTBEGN    
+ 21:47:41     0:00     1196.0         0.0         0.2        0.0    CASEPART11      COPY    BEGN    
+ 21:47:41     0:00     1196.0         0.0         0.2        0.0    ACTRAP0 11   (S)TESTBIT BEGN    
+ 21:47:41     0:00     1196.0         0.0         0.2        0.0    PHASE0  109  (S)ATVIN0  BEGN    
+ 21:47:41     0:00     1197.0         1.0         0.2        0.0    PHASE0  148     PVT     BEGN    
+ 21:47:41     0:00     1197.0         0.0         0.2        0.0    PHASE0  149     COPY    BEGN    
+ 21:47:41     0:00     1197.0         0.0         0.2        0.0    PHASE0  155     PROJVER BEGN    
+ 21:47:41     0:00     1197.0         0.0         0.2        0.0    PHASE0  158     DTIIN   BEGN    
+ 21:47:41     0:00     1197.0         0.0         0.2        0.0    PHASE0  203     OUTPUT2 BEGN    
+ 21:47:41     0:00     1197.0         0.0         0.2        0.0    PHASE0  220     OUTPUT2 BEGN    
+ 21:47:41     0:00     1197.0         0.0         0.2        0.0    PHASE0  235     OUTPUT2 BEGN    
+ 21:47:41     0:00     1197.0         0.0         0.2        0.0    PHASE0  243  (S)TESTBIT BEGN    
+ 21:47:41     0:00     1197.0         0.0         0.2        0.0    PHASE0  244  (S)TESTBIT BEGN    
+ 21:47:41     0:00     1197.0         0.0         0.2        0.0    PHASE0  245  (S)TESTBIT BEGN    
+ 21:47:41     0:00     1197.0         0.0         0.2        0.0    PHASE0  276     SEP1X   BEGN    
+ 21:47:41     0:00     1197.0         0.0         0.2        0.0    PHASE0  295     GP1LM   BEGN    
+ 21:47:41     0:00     1197.0         0.0         0.2        0.0    PHASE0  303     GP1     BEGN    
+ 21:47:41     0:00     1197.0         0.0         0.2        0.0    PHASE0  309  (S)PHASE0A BEGN    
+ 21:47:41     0:00     1197.0         0.0         0.2        0.0    PHASE0A 24      GP2     BEGN    
+ 21:47:41     0:00     1198.0         1.0         0.2        0.0    PHASE0A 165     TA1     BEGN    
+ 21:47:41     0:00     1198.0         0.0         0.2        0.0    PHASE0A 168  (S)DBSTORE BEGN    
+ 21:47:41     0:00     1200.0         2.0         0.2        0.0    PHASE0A 170     TASNP2  BEGN    
+ 21:47:41     0:00     1200.0         0.0         0.2        0.0    PHASE0  317     SEP1    BEGN    
+ 21:47:41     0:00     1201.0         1.0         0.2        0.0    PHASE0  435     TABPRT  BEGN    
+ 21:47:41     0:00     1201.0         0.0         0.2        0.0    PHASE0  436     SEP3    BEGN    
+ 21:47:41     0:00     1201.0         0.0         0.2        0.0    PHASE0  648     PVT     BEGN    
+ 21:47:41     0:00     1212.0        11.0         0.2        0.0    PHASE0  1255 (S)SETQ    BEGN    
+ 21:47:41     0:00     1212.0         0.0         0.2        0.0    PHASE0  1426    GP2     BEGN    
+ 21:47:41     0:00     1213.0         1.0         0.2        0.0    PHASE0  1477    GPJAC   BEGN    
+ 21:47:41     0:00     1213.0         0.0         0.2        0.0    PHASE0  1565    DTIIN   BEGN    
+ 21:47:41     0:00     1213.0         0.0         0.2        0.0    PHASE0  1566    GP3     BEGN    
+ 21:47:41     0:00     1213.0         0.0         0.2        0.0    PHASE0  1569    LCGEN   BEGN    
+ 21:47:41     0:00     1213.0         0.0         0.2        0.0    PHASE0  1578    VECPLOT BEGN    
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      VECPLOT 1578 SCR 301          12          6  2 1         1 1.66667E-01       3     1         12          1          1         0 *8**
+      VECPLOT 1578 DRG              12          6  2 1         1 1.66700E-01       3     1         12          1          1         0 *8**
+ 21:47:41     0:00     1213.0         0.0         0.2        0.0    PHASE0  1613    BCDR    BEGN    
+ 21:47:41     0:00     1213.0         0.0         0.2        0.0    PHASE0  1614    CASE    BEGN    
+ 21:47:41     0:00     1213.0         0.0         0.2        0.0    PHASE0  1615    PVT     BEGN    
+ 21:47:41     0:00     1213.0         0.0         0.2        0.0    PHASE0  1690    GP4     BEGN    
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      GP4     1690 YG1               1         12  2 1         1 8.33333E-02       3     1          1          1          1         0 *8**
+      GP4     1690 SPCDPVG           1         12  2 1         1 8.33333E-02       3     1          1          1          1         0 *8**
+ 21:47:41     0:00     1213.0         0.0         0.2        0.0    PHASE0  1722    MATMOD  BEGN    
+ 21:47:41     0:00     1213.0         0.0         0.2        0.0    PHASE0  1801    COPY    BEGN    
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      COPY    1801 SPCDPVG           1         12  2 1         1 8.33000E-02       3     0          1          1          1         0 *8**
+ 21:47:41     0:00     1213.0         0.0         0.2        0.0    PHASE0  1805    DPD     BEGN    
+ 21:47:41     0:00     1214.0         1.0         0.2        0.0    PHASE0  1858    COPY    BEGN    
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      COPY    1858 YG2               1         12  2 1         1 8.33000E-02       3     0          1          1          1         0 *8**
+ 21:47:41     0:00     1214.0         0.0         0.2        0.0    PHASE0  1906    COPY    BEGN    
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      COPY    1906 YG                1         12  2 1         1 8.33000E-02       3     0          1          1          1         0 *8**
+ 21:47:41     0:00     1214.0         0.0         0.2        0.0    PHASE0  1910    BCDR    BEGN    
+ 21:47:41     0:00     1214.0         0.0         0.2        0.0    PHASE0  1996 (S)SELA1   BEGN    
+ 21:47:41     0:00     1214.0         0.0         0.2        0.0    PHASE0  1998    UPARTN  BEGN    
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      UPARTN  1998 SCR 301           1         12  2 1         6 5.00000E-01       3     6          1          6          6         0 *8**
+ 21:47:41     0:00     1214.0         0.0         0.2        0.0    PHASE0  2115    OUTPUT2 BEGN    
+ 21:47:41     0:00     1214.0         0.0         0.2        0.0    SUPER1  206  (S)SETQ    BEGN    
+ 21:47:41     0:00     1214.0         0.0         0.2        0.0    SUPER1  221  (S)PHASE1DRBEGN    
+ 21:47:41     0:00     1214.0         0.0         0.2        0.0    PHASE1DR70      MATINIT BEGN    
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      MATINIT 70   CNELMP            1          3  2 1         0 0.00000E+00       3     0          1          0          0         1 *8**
+ 21:47:41     0:00     1215.0         1.0         0.2        0.0    PHASE1DR212     PVT     BEGN    
+ 21:47:41     0:00     1215.0         0.0         0.2        0.0    PHASE1DR213  (S)SETQ    BEGN    
+ 21:47:41     0:00     1215.0         0.0         0.2        0.0    PHASE1DR348  (S)DBSETOFFBEGN    
+ 21:47:41     0:00     1215.0         0.0         0.2        0.0    PHASE1DR354  (S)PHASE1A BEGN    
+ 21:47:41     0:00     1215.0         0.0         0.2        0.0    PHASE1A 95      TA1     BEGN    
+ 21:47:41     0:00     1215.0         0.0         0.2        0.0    PHASE1A 167     MSGHAN  BEGN    
+ 21:47:41     0:00     1215.0         0.0         0.2        0.0    PHASE1A 174  (S)SEMG    BEGN    
+ 21:47:41     0:00     1215.0         0.0         0.2        0.0    SEMG    112     ELTPRT  BEGN    
+ 21:47:41     0:00     1215.0         0.0         0.2        0.0    SEMG    117     EULAN   BEGN    
+ 21:47:41     0:00     1215.0         0.0         0.2        0.0    SEMG    118     OUTPUT2 BEGN    
+ 21:47:41     0:00     1215.0         0.0         0.2        0.0    SEMG    145     EMG     BEGN    
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      EMG     145  KELM              1         78  2 1        18 2.30769E-01       3     1         17         78         78         0 *8**
+      EMG     145  MELM              1         21  2 1         3 1.42857E-01       3     1          3         12         12         0 *8**
+      EMG     145  BELM              1         78  2 1         0 0.00000E+00       3     0          1          0          0         1 *8**
+ 21:47:41     0:00     1216.0         1.0         0.2        0.0    SEMG    148  (S)TESTBIT BEGN    
+ 21:47:41     0:00     1216.0         0.0         0.2        0.0    SEMG    365     EMA     BEGN    
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      EMA     365  SCR 305           1          2  2 1         2 1.00000E+00       3     2          1          2          2         0 *8**
+      EMA     365  SCR 307           2          1  2 1         1 1.00000E+00       3     1          2          1          1         0 *8**
+      EMA     365  KJJZ             12         12  6 1         2 1.66667E-01       3     1         24          7          7         0 *8**
+ 21:47:41     0:00     1216.0         0.0         0.2        0.0    SEMG    368  (S)TESTBIT BEGN    
+ 21:47:41     0:00     1217.0         1.0         0.2        0.0    SEMG    373     EMR     BEGN    
+ 21:47:41     0:00     1217.0         0.0         0.2        0.0    SEMG    415     EMA     BEGN    
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      EMA     415  SCR 305           1          2  2 1         1 5.00000E-01       3     1          1          1          1         0 *8**
+      EMA     415  SCR 307           2          1  2 1         1 5.00000E-01       3     0          1          0          1         1 *8**
+      EMA     415  MJJX             12         12  6 1         1 2.08333E-02       3     0          3          0          1         9 *8**
+ 21:47:41     0:00     1217.0         0.0         0.2        0.0    SEMG    418  (S)TESTBIT BEGN    
+ 21:47:41     0:00     1217.0         0.0         0.2        0.0    SEMG    613     EMA     BEGN    
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      EMA     613  SCR 305           1          2  2 1         2 1.00000E+00       3     2          1          2          2         0 *8**
+      EMA     613  SCR 307           2          1  2 1         1 1.00000E+00       3     1          2          1          1         0 *8**
+ 21:47:41     0:00     1217.0         0.0         0.2        0.0    SEMG    616  (S)TESTBIT BEGN    
+ 21:47:41     0:00     1217.0         0.0         0.2        0.0    SEMG    716  (S)XMTRXIN BEGN    
+ 21:47:41     0:00     1217.0         0.0         0.2        0.0    SEMG    727     ADD     BEGN    
+ 21:47:41     0:00     1217.0         0.0         0.2        0.0    SEMG    739  (S)SEMG1   BEGN    
+ 21:47:41     0:00     1217.0         0.0         0.2        0.0    SEMG1   34      GPWG    BEGN    
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      GPWG    34   SCR 301          12          6  2 1         1 1.66667E-01       3     1         12          1          1         0 *8**
+      GPWG    34   SCR 302           6         12  2 1         2 1.66667E-01       3     1         12          7          7         0 *8**
+      GPWG    34   SCR 301           6         12  2 1         1 4.16667E-02       3     0          3          0          1         3 *8**
+      GPWG    34   SCR 304           6          6  1 1         1 8.33333E-02       3     0          3          0          1         3 *8**
+ 21:47:41     0:00     1217.0         0.0         0.2        0.0    SEMG1   38      OFP     BEGN    
+ 21:47:41     0:00     1217.0         0.0         0.2        0.0    SEMG1   39      OUTPUT2 BEGN    
+ 21:47:41     0:00     1217.0         0.0         0.2        0.0    SEMG    741  (S)TESTBIT BEGN    
+ 21:47:41     0:00     1217.0         0.0         0.2        0.0    SEMG    755     PROJVER BEGN    
+ 21:47:41     0:00     1217.0         0.0         0.2        0.0    PHASE1A 199     MSGHAN  BEGN    
+ 21:47:41     0:00     1217.0         0.0         0.2        0.0    PHASE1A 200     MSGHAN  BEGN    
+ 21:47:41     0:00     1217.0         0.0         0.2        0.0    PHASE1A 201  (S)SESUM   BEGN    
+ 21:47:41     0:00     1219.0         2.0         0.2        0.0    PHASE1A 216     VECPLOT BEGN    
+ 21:47:41     0:00     1219.0         0.0         0.2        0.0    PHASE1A 274     MSGHAN  BEGN    
+ 21:47:41     0:00     1219.0         0.0         0.2        0.0    PHASE1A 281  (S)SELG    BEGN    
+ 21:47:41     0:00     1219.0         0.0         0.2        0.0    SELG    168     SSG1    BEGN    
+ *8** MODULE SSG1    - DMAP 168 -TRAILER SCRATCH           1          0          2          1          0          0, BLKS=    1*8**
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      SSG1    168  PJX               1         12  2 1         0 0.00000E+00       3     0          1          0          0         1 *8**
+ 21:47:41     0:00     1219.0         0.0         0.2        0.0    SELG    561     VECPLOT BEGN    
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      VECPLOT 561  SCR 301          12         15  2 1         1 6.66667E-02       3     1         12          1          1         0 *8**
+      VECPLOT 561  SCR 306          12         12  1 1         1 8.33333E-02       3     1         12          1          1         0 *8**
+      VECPLOT 561  SCR 307           1         12  2 1         0 0.00000E+00       3     0          1          0          0         1 *8**
+      VECPLOT 561  SCR 302           1         15  2 1         0 0.00000E+00       3     0          1          0          0         1 *8**
+      VECPLOT 561  PJRES             1          6  2 1         0 0.00000E+00       3     0          1          0          0         1 *8**
+ 21:47:41     0:00     1219.0         0.0         0.2        0.0    PHASE1A 290     MSGHAN  BEGN    
+ 21:47:41     0:00     1219.0         0.0         0.2        0.0    PHASE1A 291  (S)SESUM   BEGN    
+ 21:47:41     0:00     1221.0         2.0         0.2        0.0    PHASE1A 297  (S)SELA1   BEGN    
+ 21:47:41     0:00     1222.0         1.0         0.2        0.0    PHASE1DR449     BCDR    BEGN    
+ 21:47:41     0:00     1222.0         0.0         0.2        0.0    PHASE1DR455     PVT     BEGN    
+ 21:47:41     0:00     1222.0         0.0         0.2        0.0    PHASE1DR579  (S)PHASE1E BEGN    
+ 21:47:41     0:00     1222.0         0.0         0.2        0.0    PHASE1E 47      FOGLEL  BEGN    
+ 21:47:41     0:00     1224.0         2.0         0.2        0.0    PHASE1DR590  (S)PHASE1B BEGN    
+ 21:47:41     0:00     1224.0         0.0         0.2        0.0    PHASE1B 51   (S)SEKR0   BEGN    
+ 21:47:41     0:00     1224.0         0.0         0.2        0.0    SEKR0   139     VECPLOT BEGN    
+ 21:47:41     0:00     1224.0         0.0         0.2        0.0    SEKR0   186     GPSP    BEGN    
+ 21:47:41     0:00     1224.0         0.0         0.2        0.0    PHASE1B 70   (S)SEKMR   BEGN    
+ 21:47:41     0:00     1224.0         0.0         0.2        0.0    SEKMR   17   (S)SEKR    BEGN    
+ 21:47:41     0:00     1224.0         0.0         0.2        0.0    SEKR    17   (S)PMLUSET BEGN    
+ 21:47:41     0:00     1224.0         0.0         0.2        0.0    SEKR    23      UPARTN  BEGN    
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      UPARTN  23   SCR 301           1         12  2 1         6 5.00000E-01       3     6          1          6          6         0 *8**
+      UPARTN  23   KFF               6          6  6 1         1 1.66667E-01       3     1          6          1          1         0 *8**
+      UPARTN  23   KSF               6          6  6 1         1 1.66667E-01       3     1          6          1          1         0 *8**
+      UPARTN  23   KFS               6          6  6 1         1 1.66667E-01       3     1          6          1          1         0 *8**
+      UPARTN  23   KSS               6          6  6 1         1 1.66667E-01       3     1          6          1          1         0 *8**
+ 21:47:41     0:00     1224.0         0.0         0.2        0.0    SEKR    26      VECPLOT BEGN    
+ 21:47:41     0:00     1224.0         0.0         0.2        0.0    SEKR    153  (S)SESUM   BEGN    
+ 21:47:41     0:00     1226.0         2.0         0.2        0.0    SEKMR   18   (S)SESUM   BEGN    
+ 21:47:41     0:00     1228.0         2.0         0.2        0.0    SEKMR   30   (S)PMLUSET BEGN    
+ 21:47:41     0:00     1228.0         0.0         0.2        0.0    SEKMR   33   (S)SEMRM   BEGN    
+ 21:47:41     0:00     1228.0         0.0         0.2        0.0    SEMRM   25   (S)SEMR2   BEGN    
+ 21:47:41     0:00     1228.0         0.0         0.2        0.0    SEMR2   71      VECPLOT BEGN    
+ 21:47:41     0:00     1228.0         0.0         0.2        0.0    SEMR2   72      OFP     BEGN    
+ 21:47:41     0:00     1228.0         0.0         0.2        0.0    SEMR2   73      VECPLOT BEGN    
+ 21:47:41     0:00     1228.0         0.0         0.2        0.0    SEMR2   74      OFP     BEGN    
+ 21:47:41     0:00     1228.0         0.0         0.2        0.0    SEMR2   92      UPARTN  BEGN    
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      UPARTN  92   SCR 301           1         12  2 1         6 5.00000E-01       3     6          1          6          6         0 *8**
+      UPARTN  92   MFF               6          6  6 1         1 8.33333E-02       3     0          3          0          1         3 *8**
+      UPARTN  92   MSF               6          6  6 1         0 0.00000E+00       3     0          1          0          0         6 *8**
+      UPARTN  92   MSS               6          6  6 1         0 0.00000E+00       3     0          1          0          0         6 *8**
+ 21:47:41     0:00     1228.0         0.0         0.2        0.0    SEMR2   98      VECPLOT BEGN    
+ 21:47:41     0:00     1228.0         0.0         0.2        0.0    SEMR2   99      OFP     BEGN    
+ 21:47:41     0:00     1228.0         0.0         0.2        0.0    SEKMR   54   (S)XADD5   BEGN    
+ 21:47:41     0:00     1228.0         0.0         0.2        0.0    PHASE1B 74   (S)PMLUSET BEGN    
+ 21:47:41     0:00     1228.0         0.0         0.2        0.0    PHASE1B 80   (S)SEGOA   BEGN    
+ 21:47:41     0:00     1228.0         0.0         0.2        0.0    PHASE1B 91   (S)SEMRB   BEGN    
+ 21:47:41     0:00     1228.0         0.0         0.2        0.0    SEMRB   91   (S)XADD5   BEGN    
+ 21:47:41     0:00     1228.0         0.0         0.2        0.0    PHASE1B 92      UPARTN  BEGN    
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      UPARTN  92   SCR 301           1         12  2 1         6 5.00000E-01       3     6          1          6          6         0 *8**
+ 21:47:41     0:00     1229.0         1.0         0.2        0.0    PHASE1B 101  (S)SEMRB   BEGN    
+ 21:47:41     0:00     1229.0         0.0         0.2        0.0    SEMRB   91   (S)XADD5   BEGN    
+ 21:47:41     0:00     1229.0         0.0         0.2        0.0    PHASE1B 102     UPARTN  BEGN    
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      UPARTN  102  SCR 301           1         12  2 1         6 5.00000E-01       3     6          1          6          6         0 *8**
+ 21:47:41     0:00     1229.0         0.0         0.2        0.0    PHASE1B 108  (S)SESUM   BEGN    
+ 21:47:41     0:00     1232.0         3.0         0.2        0.0    PHASE1B 438  (S)SEGOA   BEGN    
+ 21:47:41     0:00     1232.0         0.0         0.2        0.0    PHASE1B 446  (S)SELR    BEGN    
+ 21:47:41     0:00     1232.0         0.0         0.2        0.0    SELR    65      UPARTN  BEGN    
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      UPARTN  65   SCR 301           1         12  2 1         6 5.00000E-01       3     6          1          6          6         0 *8**
+      UPARTN  65   YS                1          6  2 1         1 1.66667E-01       3     1          1          1          1         0 *8**
+ 21:47:41     0:00     1232.0         0.0         0.2        0.0    PHASE1B 449  (S)SESUM   BEGN    
+ 21:47:41     0:00     1235.0         3.0         0.2        0.0    PHASE1B 695     SSG2    BEGN    
+ 21:47:41     0:00     1235.0         0.0         0.2        0.0    PHASE1DR602     PVT     BEGN    
+ 21:47:41     0:00     1235.0         0.0         0.2        0.0    PHASE1DR854     BCDR    BEGN    
+ 21:47:41     0:00     1235.0         0.0         0.2        0.0    SEDFREQ 160  (S)PMLUSET BEGN    
+ 21:47:41     0:00     1235.0         0.0         0.2        0.0    SEDFREQ 172  (S)ATVTRAPABEGN    
+ 21:47:41     0:00     1236.0         1.0         0.2        0.0    SEDFREQ 230  (S)CASEPARTBEGN    
+ 21:47:41     0:00     1236.0         0.0         0.2        0.0    CASEPART11      COPY    BEGN    
+ 21:47:41     0:00     1236.0         0.0         0.2        0.0    SEDFREQ 231     ATVGP   BEGN    
+ 21:47:41     0:00     1236.0         0.0         0.2        0.0    SEDFREQ 243     DPDAC   BEGN    
+ 21:47:41     0:00     1236.0         0.0         0.2        0.0    SEDFREQ 244     DPD     BEGN    
+ 21:47:41     0:00     1236.0         0.0         0.2        0.0    SEDFREQ 253     FRLGEN  BEGN    
+ 21:47:41     0:00     1236.0         0.0         0.2        0.0    SEDFREQ 323  (S)SEGOA   BEGN    
+ 21:47:41     0:00     1236.0         0.0         0.2        0.0    SEDFREQ 380     CASE    BEGN    
+ 21:47:41     0:00     1236.0         0.0         0.2        0.0    SEDFREQ 382     PVT     BEGN    
+ 21:47:41     0:00     1236.0         0.0         0.2        0.0    SEDFREQ 390     PVT     BEGN    
+ 21:47:41     0:00     1236.0         0.0         0.2        0.0    SEDFREQ 427  (S)GMA     BEGN    
+ 21:47:41     0:00     1236.0         0.0         0.2        0.0    GMA     54   (S)XMTRXIN BEGN    
+ 21:47:41     0:00     1236.0         0.0         0.2        0.0    GMA     236  (S)XADD5   BEGN    
+ 21:47:41     0:00     1236.0         0.0         0.2        0.0    GMA     242     ADD5    BEGN    
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      ADD5    242  GK1DD             6          6  6 3         2 1.66667E-01       3     1          6          1          1         0 *8**
+ 21:47:41     0:00     1236.0         0.0         0.2        0.0    GMA     762  (S)XADD5   BEGN    
+ 21:47:41     0:00     1236.0         0.0         0.2        0.0    GMA     777     MATMOD  BEGN    
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      MATMOD  777  VDXW              6          6  6 1         0 0.00000E+00       3     0          1          0          0         6 *8**
+ 21:47:41     0:00     1236.0         0.0         0.2        0.0    SEDFREQ 454  (S)CHCKPEAKBEGN    
+ 21:47:41     0:00     1236.0         0.0         0.2        0.0    SEDFREQ 455  (S)CHCKPEAKBEGN    
+ 21:47:41     0:00     1236.0         0.0         0.2        0.0    SEDFREQ 456  (S)CHCKPEAKBEGN    
+ 21:47:41     0:00     1236.0         0.0         0.2        0.0    SEDFREQ 457  (S)CHCKPEAKBEGN    
+ 21:47:41     0:00     1236.0         0.0         0.2        0.0    SEDFREQ 458  (S)CHCKPEAKBEGN    
+ 21:47:41     0:00     1236.0         0.0         0.2        0.0    SEDFREQ 459  (S)CHCKPEAKBEGN    
+ 21:47:41     0:00     1236.0         0.0         0.2        0.0    SEDFREQ 460  (S)CHCKPEAKBEGN    
+ 21:47:41     0:00     1236.0         0.0         0.2        0.0    SEDFREQ 465  (S)XADD5   BEGN    
+ 21:47:41     0:00     1236.0         0.0         0.2        0.0    SEDFREQ 469     DTIIN   BEGN    
+ 21:47:41     0:00     1236.0         0.0         0.2        0.0    SEDFREQ 533  (S)FDRMGEN BEGN    
+ 21:47:41     0:00     1236.0         0.0         0.2        0.0    FDRMGEN 15   (S)XADD5   BEGN    
+ 21:47:41     0:00     1236.0         0.0         0.2        0.0    FDRMGEN 66      UPARTN  BEGN    
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      UPARTN  66   SCR 301           1         12  2 1         6 5.00000E-01       3     6          1          6          6         0 *8**
+      UPARTN  66   YS                1          6  2 1         1 1.66667E-01       3     1          1          1          1         0 *8**
+ 21:47:41     0:00     1236.0         0.0         0.2        0.0    FDRMGEN 107     MATGEN  BEGN    
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      MATGEN  107  IFF               6          6  6 1         1 1.66667E-01       3     1          6          1          1         0 *8**
+ 21:47:41     0:00     1236.0         0.0         0.2        0.0    FDRMGEN 114     UMERGE1 BEGN    
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      UMERGE1 114  SCR 301           1         12  2 1         6 5.00000E-01       3     6          1          6          6         0 *8**
+      UMERGE1 114  RNA               6         12  2 1         1 8.33333E-02       3     1          6          1          1         0 *8**
+ 21:47:41     0:00     1236.0         0.0         0.2        0.0    FDRMGEN 153     MATGEN  BEGN    
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      MATGEN  153  ISS               6          6  6 1         1 1.66667E-01       3     1          6          1          1         0 *8**
+ 21:47:41     0:00     1236.0         0.0         0.2        0.0    FDRMGEN 154     UMERGE1 BEGN    
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      UMERGE1 154  SCR 301           1         12  2 1         6 5.00000E-01       3     6          1          6          6         0 *8**
+      UMERGE1 154  INS               6         12  2 1         1 8.33333E-02       3     1          6          1          1         0 *8**
+ 21:47:41     0:00     1236.0         0.0         0.2        0.0    FDRMGEN 240  (S)CFORCE1 BEGN    
+ 21:47:41     0:00     1236.0         0.0         0.2        0.0    CFORCE1 47   (S)FLUIDPRTBEGN    
+ 21:47:41     0:00     1236.0         0.0         0.2        0.0    CFORCE1 59   (S)XADD5   BEGN    
+ 21:47:41     0:00     1237.0         1.0         0.2        0.0    CFORCE1 112  (S)XADD5   BEGN    
+ 21:47:41     0:00     1237.0         0.0         0.2        0.0    XADD5   37      ADD5    BEGN    
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      ADD5    37   KSF1              6          6  6 3         2 1.66667E-01       3     1          6          1          1         0 *8**
+ 21:47:41     0:00     1237.0         0.0         0.2        0.0    CFORCE1 124  (S)XADD5   BEGN    
+ 21:47:41     0:00     1237.0         0.0         0.2        0.0    FDRMGEN 242  (S)CFORCE1 BEGN    
+ 21:47:41     0:00     1237.0         0.0         0.2        0.0    CFORCE1 47   (S)FLUIDPRTBEGN    
+ 21:47:41     0:00     1237.0         0.0         0.2        0.0    CFORCE1 59   (S)XADD5   BEGN    
+ 21:47:41     0:00     1237.0         0.0         0.2        0.0    CFORCE1 112  (S)XADD5   BEGN    
+ 21:47:41     0:00     1237.0         0.0         0.2        0.0    XADD5   37      ADD5    BEGN    
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      ADD5    37   KSS1              6          6  6 3         2 1.66667E-01       3     1          6          1          1         0 *8**
+ 21:47:41     0:00     1237.0         0.0         0.2        0.0    CFORCE1 124  (S)XADD5   BEGN    
+ 21:47:41     0:00     1237.0         0.0         0.2        0.0    FDRMGEN 257  (S)XADD5   BEGN    
+ 21:47:41     0:00     1237.0         0.0         0.2        0.0    SEDFREQ 535  (S)XADD5   BEGN    
+ 21:47:41     0:00     1237.0         0.0         0.2        0.0    SEDFREQ 536  (S)XADD5   BEGN    
+ 21:47:41     0:00     1237.0         0.0         0.2        0.0    SEDFREQ 537  (S)XADD5   BEGN    
+ 21:47:41     0:00     1237.0         0.0         0.2        0.0    SEDFREQ 567     DTIIN   BEGN    
+ 21:47:41     0:00     1237.0         0.0         0.2        0.0    SEDFREQ 570     CASE    BEGN    
+ 21:47:41     0:00     1237.0         0.0         0.2        0.0    SEDFREQ 572     PVT     BEGN    
+ 21:47:41     0:00     1237.0         0.0         0.2        0.0    SEDFREQ 583     FRLG    BEGN    
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      FRLG    583  PPF             106         12  2 3         0 0.00000E+00       3     0          1          0          0       106 *8**
+      FRLG    583  YPF             106         12  2 3         2 8.33333E-02       3     1        106          1          1         0 *8**
+ 21:47:41     0:00     1237.0         0.0         0.2        0.0    SEDFREQ 756     UPARTN  BEGN    
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      UPARTN  756  SCR 301           1         12  2 1         6 5.00000E-01       3     6          1          6          6         0 *8**
+      UPARTN  756  YSF             106          6  2 3         2 1.66667E-01       3     1        106          1          1         0 *8**
+ 21:47:41     0:00     1237.0         0.0         0.2        0.0    SEDFREQ 757     UPARTN  BEGN    
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      UPARTN  757  SCR 301           1         12  2 1         6 5.00000E-01       3     6          1          6          6         0 *8**
+      UPARTN  757  RFD               6          6  1 1         1 1.66667E-01       3     1          6          1          1         0 *8**
+ 21:47:41     0:00     1237.0         0.0         0.2        0.0    SEDFREQ 758  (S)CFORCE2 BEGN    
+ 21:47:41     0:00     1237.0         0.0         0.2        0.0    CFORCE2 41      MATMOD  BEGN    
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      MATMOD  41   UYMAX             1          6  2 1         1 1.66667E-01       3     1          1          1          1         0 *8**
+ 21:47:41     0:00     1237.0         0.0         0.2        0.0    CFORCE2 44      MATMOD  BEGN    
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      MATMOD  44   KMAX              1          6  2 1         6 1.00000E+00       3     6          1          6          6         0 *8**
+ 21:47:41     0:00     1237.0         0.0         0.2        0.0    CFORCE2 47   (S)XADD5   BEGN    
+ 21:47:41     0:00     1237.0         0.0         0.2        0.0    XADD5   37      ADD5    BEGN    
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      ADD5    37   TMAX1             1          6  2 1         6 1.00000E+00       3     6          1          6          6         0 *8**
+ 21:47:41     0:00     1237.0         0.0         0.2        0.0    CFORCE2 48   (S)XADD5   BEGN    
+ 21:47:41     0:00     1237.0         0.0         0.2        0.0    CFORCE2 49      DIAGONALBEGN    
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      DIAGONAL49   PARTSX            1          6  2 1         6 1.00000E+00       3     6          1          6          6         0 *8**
+ 21:47:41     0:00     1237.0         0.0         0.2        0.0    CFORCE2 50      MPYAD   BEGN    
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      MPYAD   50   PARTS             1          6  2 1         6 1.00000E+00       3     6          1          6          6         0 *8**
+ 21:47:41     0:00     1237.0         0.0         0.2        0.0    CFORCE2 55      PARTN   BEGN    
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      PARTN   55   UYX             106          6  2 3         2 1.66700E-01       3     1        106          1          1         0 *8**
+ 21:47:41     0:00     1237.0         0.0         0.2        0.0    CFORCE2 58      PARTN   BEGN    
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      PARTN   58   KXY1X             6          6  6 3         2 1.66700E-01       3     1          6          1          1         0 *8**
+ 21:47:41     0:00     1237.0         0.0         0.2        0.0    CFORCE2 219     DSAP    BEGN    
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      DSAP    219  SCR 302         106        106  3 3         2 9.43396E-03       3     1        106          1          1         0 *8**
+      DSAP    219  VELO            106          6  2 3         2 1.66667E-01       3     1        106          1          1         0 *8**
+ 21:47:41     0:00     1237.0         0.0         0.2        0.0    CFORCE2 239  (S)SPMPYAD BEGN    
+ 21:47:41     0:00     1237.0         0.0         0.2        0.0    SPMPYAD 31      MATMOD  BEGN    
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      MATMOD  31   PVA1              1          6  2 1         6 1.00000E+00       3     6          1          6          6         0 *8**
+ 21:47:41     0:00     1237.0         0.0         0.2        0.0    SPMPYAD 69      MPYAD   BEGN    
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      MPYAD   69   QX1X            106          6  2 3         2 1.66667E-01       3     1        106          1          1         0 *8**
+ 21:47:41     0:00     1237.0         0.0         0.2        0.0    CFORCE2 271  (S)XADD5   BEGN    
+ 21:47:41     0:00     1237.0         0.0         0.2        0.0    CFORCE2 321  (S)SPMPYAD BEGN    
+ 21:47:41     0:00     1237.0         0.0         0.2        0.0    SPMPYAD 31      MATMOD  BEGN    
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      MATMOD  31   PVA1              1          6  2 1         6 1.00000E+00       3     6          1          6          6         0 *8**
+ 21:47:41     0:00     1237.0         0.0         0.2        0.0    SPMPYAD 69      MPYAD   BEGN    
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      MPYAD   69   PYDF            106          6  2 3         2 1.66667E-01       3     1        106          1          1         0 *8**
+ 21:47:41     0:00     1237.0         0.0         0.2        0.0    SEDFREQ 856     SETMON  BEGN    
+ 21:47:41     0:00     1237.0         0.0         0.2        0.0    SEDFREQ 912  (S)FREQRS  BEGN    
+ 21:47:41     0:00     1237.0         0.0         0.2        0.0    FREQRS  81   (S)SPMPYAD BEGN    
+ 21:47:41     0:00     1237.0         0.0         0.2        0.0    SPMPYAD 31      MATMOD  BEGN    
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      MATMOD  31   PVA1              1         12  2 1         6 5.00000E-01       3     6          1          6          6         0 *8**
+ 21:47:41     0:00     1237.0         0.0         0.2        0.0    SPMPYAD 69      MPYAD   BEGN    
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      MPYAD   69   PDF             106          6  2 3         2 1.66667E-01       3     1        106          1          1         0 *8**
+ 21:47:41     0:00     1237.0         0.0         0.2        0.0    FREQRS  177     MATMOD  BEGN    
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      MATMOD  177  PDFXMAX           1        106  2 1       106 1.00000E+00       3   106          1        106        106         0 *8**
+ 21:47:41     0:00     1237.0         0.0         0.2        0.0    FREQRS  691     MSGHAN  BEGN    
+ 21:47:41     0:00     1237.0         0.0         0.2        0.0    FREQRS  713  (S)DBFETCH BEGN    
+ 21:47:41     0:00     1237.0         0.0         0.2        0.0    FREQRS  792     FRRD1   BEGN    
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66667E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66700E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 303           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+ 21:47:41     0:00     1237.0         0.0         0.2        0.0    MUMPSDCP BGN
+ 21:47:41     0:00     1237.0         0.0         0.2        0.0    MUMPSDCP END
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      FRRD1   792  UDF               1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66667E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66700E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 303           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+ 21:47:41     0:00     1237.0         0.0         0.2        0.0    MUMPSDCP BGN
+ 21:47:41     0:00     1237.0         0.0         0.2        0.0    MUMPSDCP END
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      FRRD1   792  SCR 304           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+      FRRD1   792  UDF               2          6  2 3         2 1.66667E-01       3     1          2          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66667E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66700E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 303           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+ 21:47:41     0:00     1237.0         0.0         0.2        0.0    MUMPSDCP BGN
+ 21:47:41     0:00     1237.0         0.0         0.2        0.0    MUMPSDCP END
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      FRRD1   792  SCR 304           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+      FRRD1   792  UDF               3          6  2 3         2 1.66667E-01       3     1          3          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66667E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66700E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 303           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+ 21:47:41     0:00     1237.0         0.0         0.2        0.0    MUMPSDCP BGN
+ 21:47:41     0:00     1237.0         0.0         0.2        0.0    MUMPSDCP END
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      FRRD1   792  SCR 304           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+      FRRD1   792  UDF               4          6  2 3         2 1.66667E-01       3     1          4          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66667E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66700E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 303           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+ 21:47:41     0:00     1237.0         0.0         0.2        0.0    MUMPSDCP BGN
+ 21:47:41     0:00     1237.0         0.0         0.2        0.0    MUMPSDCP END
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      FRRD1   792  SCR 304           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+      FRRD1   792  UDF               5          6  2 3         2 1.66667E-01       3     1          5          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66667E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66700E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 303           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+ 21:47:41     0:00     1237.0         0.0         0.2        0.0    MUMPSDCP BGN
+ 21:47:41     0:00     1237.0         0.0         0.2        0.0    MUMPSDCP END
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      FRRD1   792  SCR 304           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+      FRRD1   792  UDF               6          6  1 3         2 1.66667E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66667E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66700E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 303           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+ 21:47:41     0:00     1237.0         0.0         0.2        0.0    MUMPSDCP BGN
+ 21:47:41     0:00     1237.0         0.0         0.2        0.0    MUMPSDCP END
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      FRRD1   792  SCR 304           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+      FRRD1   792  UDF               7          6  2 3         2 1.66667E-01       3     1          7          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66667E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66700E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 303           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+ 21:47:41     0:00     1237.0         0.0         0.2        0.0    MUMPSDCP BGN
+ 21:47:41     0:00     1237.0         0.0         0.2        0.0    MUMPSDCP END
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      FRRD1   792  SCR 304           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+      FRRD1   792  UDF               8          6  2 3         2 1.66667E-01       3     1          8          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66667E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66700E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 303           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+ 21:47:41     0:00     1237.0         0.0         0.2        0.0    MUMPSDCP BGN
+ 21:47:41     0:00     1237.0         0.0         0.2        0.0    MUMPSDCP END
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      FRRD1   792  SCR 304           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+      FRRD1   792  UDF               9          6  2 3         2 1.66667E-01       3     1          9          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66667E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66700E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 303           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+ 21:47:41     0:00     1237.0         0.0         0.2        0.0    MUMPSDCP BGN
+ 21:47:41     0:00     1237.0         0.0         0.2        0.0    MUMPSDCP END
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      FRRD1   792  SCR 304           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+      FRRD1   792  UDF              10          6  2 3         2 1.66667E-01       3     1         10          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66667E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66700E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 303           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+ 21:47:41     0:00     1237.0         0.0         0.2        0.0    MUMPSDCP BGN
+ 21:47:41     0:00     1237.0         0.0         0.2        0.0    MUMPSDCP END
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      FRRD1   792  SCR 304           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+      FRRD1   792  UDF              11          6  2 3         2 1.66667E-01       3     1         11          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66667E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66700E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 303           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+ 21:47:41     0:00     1237.0         0.0         0.2        0.0    MUMPSDCP BGN
+ 21:47:41     0:00     1237.0         0.0         0.2        0.0    MUMPSDCP END
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      FRRD1   792  SCR 304           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+      FRRD1   792  UDF              12          6  2 3         2 1.66667E-01       3     1         12          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66667E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66700E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 303           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+ 21:47:41     0:00     1237.0         0.0         0.2        0.0    MUMPSDCP BGN
+ 21:47:41     0:00     1237.0         0.0         0.2        0.0    MUMPSDCP END
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      FRRD1   792  SCR 304           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+      FRRD1   792  UDF              13          6  2 3         2 1.66667E-01       3     1         13          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66667E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66700E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 303           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+ 21:47:41     0:00     1237.0         0.0         0.2        0.0    MUMPSDCP BGN
+ 21:47:41     0:00     1237.0         0.0         0.2        0.0    MUMPSDCP END
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      FRRD1   792  SCR 304           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+      FRRD1   792  UDF              14          6  2 3         2 1.66667E-01       3     1         14          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66667E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66700E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 303           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+ 21:47:41     0:00     1237.0         0.0         0.2        0.0    MUMPSDCP BGN
+ 21:47:41     0:00     1237.0         0.0         0.2        0.0    MUMPSDCP END
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      FRRD1   792  SCR 304           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+      FRRD1   792  UDF              15          6  2 3         2 1.66667E-01       3     1         15          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66667E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66700E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 303           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+ 21:47:41     0:00     1237.0         0.0         0.2        0.0    MUMPSDCP BGN
+ 21:47:41     0:00     1237.0         0.0         0.2        0.0    MUMPSDCP END
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      FRRD1   792  SCR 304           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+      FRRD1   792  UDF              16          6  2 3         2 1.66667E-01       3     1         16          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66667E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66700E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 303           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+ 21:47:41     0:00     1237.0         0.0         0.2        0.0    MUMPSDCP BGN
+ 21:47:41     0:00     1237.0         0.0         0.2        0.0    MUMPSDCP END
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      FRRD1   792  SCR 304           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+      FRRD1   792  UDF              17          6  2 3         2 1.66667E-01       3     1         17          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66667E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66700E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 303           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+ 21:47:41     0:00     1237.0         0.0         0.2        0.0    MUMPSDCP BGN
+ 21:47:41     0:00     1237.0         0.0         0.2        0.0    MUMPSDCP END
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      FRRD1   792  SCR 304           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+      FRRD1   792  UDF              18          6  2 3         2 1.66667E-01       3     1         18          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66667E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66700E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 303           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+ 21:47:41     0:00     1237.0         0.0         0.2        0.0    MUMPSDCP BGN
+ 21:47:41     0:00     1237.0         0.0         0.2        0.0    MUMPSDCP END
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      FRRD1   792  SCR 304           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+      FRRD1   792  UDF              19          6  2 3         2 1.66667E-01       3     1         19          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66667E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66700E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 303           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+ 21:47:41     0:00     1237.0         0.0         0.2        0.0    MUMPSDCP BGN
+ 21:47:41     0:00     1237.0         0.0         0.2        0.0    MUMPSDCP END
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      FRRD1   792  SCR 304           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+      FRRD1   792  UDF              20          6  2 3         2 1.66667E-01       3     1         20          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66667E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66700E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 303           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+ 21:47:41     0:00     1237.0         0.0         0.2        0.0    MUMPSDCP BGN
+ 21:47:41     0:00     1237.0         0.0         0.2        0.0    MUMPSDCP END
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      FRRD1   792  SCR 304           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+      FRRD1   792  UDF              21          6  2 3         2 1.66667E-01       3     1         21          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66667E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66700E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 303           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+ 21:47:41     0:00     1237.0         0.0         0.2        0.0    MUMPSDCP BGN
+ 21:47:41     0:00     1237.0         0.0         0.2        0.0    MUMPSDCP END
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      FRRD1   792  SCR 304           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+      FRRD1   792  UDF              22          6  2 3         2 1.66667E-01       3     1         22          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66667E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66700E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 303           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+ 21:47:41     0:00     1237.0         0.0         0.2        0.0    MUMPSDCP BGN
+ 21:47:41     0:00     1237.0         0.0         0.2        0.0    MUMPSDCP END
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      FRRD1   792  SCR 304           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+      FRRD1   792  UDF              23          6  2 3         2 1.66667E-01       3     1         23          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66667E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66700E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 303           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+ 21:47:41     0:00     1237.0         0.0         0.2        0.0    MUMPSDCP BGN
+ 21:47:41     0:00     1237.0         0.0         0.2        0.0    MUMPSDCP END
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      FRRD1   792  SCR 304           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+      FRRD1   792  UDF              24          6  2 3         2 1.66667E-01       3     1         24          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66667E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66700E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 303           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+ 21:47:41     0:00     1237.0         0.0         0.2        0.0    MUMPSDCP BGN
+ 21:47:41     0:00     1237.0         0.0         0.2        0.0    MUMPSDCP END
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      FRRD1   792  SCR 304           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+      FRRD1   792  UDF              25          6  2 3         2 1.66667E-01       3     1         25          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66667E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66700E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 303           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+ 21:47:41     0:00     1237.0         0.0         0.2        0.0    MUMPSDCP BGN
+ 21:47:41     0:00     1237.0         0.0         0.2        0.0    MUMPSDCP END
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      FRRD1   792  SCR 304           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+      FRRD1   792  UDF              26          6  2 3         2 1.66667E-01       3     1         26          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66667E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66700E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 303           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP BGN
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP END
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      FRRD1   792  SCR 304           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+      FRRD1   792  UDF              27          6  2 3         2 1.66667E-01       3     1         27          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66667E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66700E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 303           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP BGN
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP END
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      FRRD1   792  SCR 304           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+      FRRD1   792  UDF              28          6  2 3         2 1.66667E-01       3     1         28          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66667E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66700E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 303           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP BGN
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP END
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      FRRD1   792  SCR 304           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+      FRRD1   792  UDF              29          6  2 3         2 1.66667E-01       3     1         29          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66667E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66700E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 303           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP BGN
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP END
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      FRRD1   792  SCR 304           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+      FRRD1   792  UDF              30          6  2 3         2 1.66667E-01       3     1         30          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66667E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66700E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 303           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP BGN
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP END
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      FRRD1   792  SCR 304           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+      FRRD1   792  UDF              31          6  2 3         2 1.66667E-01       3     1         31          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66667E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66700E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 303           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP BGN
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP END
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      FRRD1   792  SCR 304           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+      FRRD1   792  UDF              32          6  2 3         2 1.66667E-01       3     1         32          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66667E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66700E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 303           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP BGN
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP END
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      FRRD1   792  SCR 304           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+      FRRD1   792  UDF              33          6  2 3         2 1.66667E-01       3     1         33          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66667E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66700E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 303           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP BGN
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP END
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      FRRD1   792  SCR 304           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+      FRRD1   792  UDF              34          6  2 3         2 1.66667E-01       3     1         34          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66667E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66700E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 303           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP BGN
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP END
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      FRRD1   792  SCR 304           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+      FRRD1   792  UDF              35          6  2 3         2 1.66667E-01       3     1         35          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66667E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66700E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 303           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP BGN
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP END
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      FRRD1   792  SCR 304           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+      FRRD1   792  UDF              36          6  2 3         2 1.66667E-01       3     1         36          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66667E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66700E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 303           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP BGN
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP END
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      FRRD1   792  SCR 304           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+      FRRD1   792  UDF              37          6  2 3         2 1.66667E-01       3     1         37          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66667E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66700E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 303           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP BGN
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP END
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      FRRD1   792  SCR 304           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+      FRRD1   792  UDF              38          6  2 3         2 1.66667E-01       3     1         38          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66667E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66700E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 303           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP BGN
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP END
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      FRRD1   792  SCR 304           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+      FRRD1   792  UDF              39          6  2 3         2 1.66667E-01       3     1         39          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66667E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66700E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 303           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP BGN
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP END
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      FRRD1   792  SCR 304           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+      FRRD1   792  UDF              40          6  2 3         2 1.66667E-01       3     1         40          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66667E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66700E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 303           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP BGN
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP END
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      FRRD1   792  SCR 304           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+      FRRD1   792  UDF              41          6  2 3         2 1.66667E-01       3     1         41          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66667E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66700E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 303           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP BGN
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP END
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      FRRD1   792  SCR 304           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+      FRRD1   792  UDF              42          6  2 3         2 1.66667E-01       3     1         42          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66667E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66700E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 303           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP BGN
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP END
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      FRRD1   792  SCR 304           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+      FRRD1   792  UDF              43          6  2 3         2 1.66667E-01       3     1         43          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66667E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66700E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 303           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP BGN
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP END
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      FRRD1   792  SCR 304           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+      FRRD1   792  UDF              44          6  2 3         2 1.66667E-01       3     1         44          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66667E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66700E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 303           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP BGN
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP END
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      FRRD1   792  SCR 304           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+      FRRD1   792  UDF              45          6  2 3         2 1.66667E-01       3     1         45          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66667E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66700E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 303           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP BGN
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP END
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      FRRD1   792  SCR 304           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+      FRRD1   792  UDF              46          6  2 3         2 1.66667E-01       3     1         46          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66667E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66700E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 303           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP BGN
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP END
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      FRRD1   792  SCR 304           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+      FRRD1   792  UDF              47          6  2 3         2 1.66667E-01       3     1         47          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66667E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66700E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 303           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP BGN
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP END
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      FRRD1   792  SCR 304           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+      FRRD1   792  UDF              48          6  2 3         2 1.66667E-01       3     1         48          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66667E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66700E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 303           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP BGN
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP END
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      FRRD1   792  SCR 304           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+      FRRD1   792  UDF              49          6  2 3         2 1.66667E-01       3     1         49          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66667E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66700E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 303           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP BGN
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP END
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      FRRD1   792  SCR 304           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+      FRRD1   792  UDF              50          6  2 3         2 1.66667E-01       3     1         50          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66667E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66700E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 303           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP BGN
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP END
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      FRRD1   792  SCR 304           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+      FRRD1   792  UDF              51          6  2 3         2 1.66667E-01       3     1         51          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66667E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66700E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 303           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP BGN
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP END
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      FRRD1   792  SCR 304           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+      FRRD1   792  UDF              52          6  2 3         2 1.66667E-01       3     1         52          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66667E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66700E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 303           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP BGN
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP END
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      FRRD1   792  SCR 304           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+      FRRD1   792  UDF              53          6  2 3         2 1.66667E-01       3     1         53          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66667E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66700E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 303           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP BGN
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP END
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      FRRD1   792  SCR 304           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+      FRRD1   792  UDF              54          6  2 3         2 1.66667E-01       3     1         54          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66667E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66700E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 303           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP BGN
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP END
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      FRRD1   792  SCR 304           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+      FRRD1   792  UDF              55          6  2 3         2 1.66667E-01       3     1         55          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66667E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66700E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 303           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP BGN
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP END
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      FRRD1   792  SCR 304           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+      FRRD1   792  UDF              56          6  2 3         2 1.66667E-01       3     1         56          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66667E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66700E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 303           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP BGN
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP END
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      FRRD1   792  SCR 304           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+      FRRD1   792  UDF              57          6  2 3         2 1.66667E-01       3     1         57          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66667E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66700E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 303           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP BGN
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP END
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      FRRD1   792  SCR 304           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+      FRRD1   792  UDF              58          6  2 3         2 1.66667E-01       3     1         58          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66667E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66700E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 303           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP BGN
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP END
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      FRRD1   792  SCR 304           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+      FRRD1   792  UDF              59          6  2 3         2 1.66667E-01       3     1         59          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66667E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66700E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 303           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP BGN
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP END
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      FRRD1   792  SCR 304           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+      FRRD1   792  UDF              60          6  2 3         2 1.66667E-01       3     1         60          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66667E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66700E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 303           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP BGN
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP END
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      FRRD1   792  SCR 304           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+      FRRD1   792  UDF              61          6  2 3         2 1.66667E-01       3     1         61          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66667E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66700E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 303           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP BGN
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP END
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      FRRD1   792  SCR 304           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+      FRRD1   792  UDF              62          6  2 3         2 1.66667E-01       3     1         62          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66667E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66700E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 303           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP BGN
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP END
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      FRRD1   792  SCR 304           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+      FRRD1   792  UDF              63          6  2 3         2 1.66667E-01       3     1         63          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66667E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66700E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 303           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP BGN
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP END
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      FRRD1   792  SCR 304           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+      FRRD1   792  UDF              64          6  2 3         2 1.66667E-01       3     1         64          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66667E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66700E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 303           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP BGN
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP END
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      FRRD1   792  SCR 304           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+      FRRD1   792  UDF              65          6  2 3         2 1.66667E-01       3     1         65          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66667E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66700E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 303           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP BGN
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP END
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      FRRD1   792  SCR 304           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+      FRRD1   792  UDF              66          6  2 3         2 1.66667E-01       3     1         66          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66667E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66700E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 303           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP BGN
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP END
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      FRRD1   792  SCR 304           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+      FRRD1   792  UDF              67          6  2 3         2 1.66667E-01       3     1         67          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66667E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66700E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 303           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP BGN
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP END
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      FRRD1   792  SCR 304           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+      FRRD1   792  UDF              68          6  2 3         2 1.66667E-01       3     1         68          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66667E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66700E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 303           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP BGN
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP END
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      FRRD1   792  SCR 304           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+      FRRD1   792  UDF              69          6  2 3         2 1.66667E-01       3     1         69          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66667E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66700E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 303           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP BGN
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP END
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      FRRD1   792  SCR 304           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+      FRRD1   792  UDF              70          6  2 3         2 1.66667E-01       3     1         70          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66667E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66700E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 303           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP BGN
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP END
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      FRRD1   792  SCR 304           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+      FRRD1   792  UDF              71          6  2 3         2 1.66667E-01       3     1         71          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66667E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66700E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 303           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP BGN
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP END
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      FRRD1   792  SCR 304           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+      FRRD1   792  UDF              72          6  2 3         2 1.66667E-01       3     1         72          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66667E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66700E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 303           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP BGN
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP END
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      FRRD1   792  SCR 304           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+      FRRD1   792  UDF              73          6  2 3         2 1.66667E-01       3     1         73          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66667E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66700E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 303           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP BGN
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP END
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      FRRD1   792  SCR 304           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+      FRRD1   792  UDF              74          6  2 3         2 1.66667E-01       3     1         74          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66667E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66700E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 303           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP BGN
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP END
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      FRRD1   792  SCR 304           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+      FRRD1   792  UDF              75          6  2 3         2 1.66667E-01       3     1         75          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66667E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66700E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 303           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP BGN
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP END
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      FRRD1   792  SCR 304           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+      FRRD1   792  UDF              76          6  2 3         2 1.66667E-01       3     1         76          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66667E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66700E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 303           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP BGN
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP END
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      FRRD1   792  SCR 304           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+      FRRD1   792  UDF              77          6  2 3         2 1.66667E-01       3     1         77          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66667E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66700E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 303           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP BGN
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP END
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      FRRD1   792  SCR 304           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+      FRRD1   792  UDF              78          6  2 3         2 1.66667E-01       3     1         78          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66667E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66700E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 303           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP BGN
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP END
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      FRRD1   792  SCR 304           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+      FRRD1   792  UDF              79          6  2 3         2 1.66667E-01       3     1         79          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66667E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66700E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 303           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP BGN
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP END
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      FRRD1   792  SCR 304           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+      FRRD1   792  UDF              80          6  2 3         2 1.66667E-01       3     1         80          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66667E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66700E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 303           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP BGN
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP END
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      FRRD1   792  SCR 304           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+      FRRD1   792  UDF              81          6  2 3         2 1.66667E-01       3     1         81          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66667E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66700E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 303           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP BGN
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP END
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      FRRD1   792  SCR 304           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+      FRRD1   792  UDF              82          6  2 3         2 1.66667E-01       3     1         82          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66667E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66700E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 303           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP BGN
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP END
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      FRRD1   792  SCR 304           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+      FRRD1   792  UDF              83          6  2 3         2 1.66667E-01       3     1         83          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66667E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66700E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 303           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP BGN
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP END
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      FRRD1   792  SCR 304           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+      FRRD1   792  UDF              84          6  2 3         2 1.66667E-01       3     1         84          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66667E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66700E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 303           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP BGN
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP END
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      FRRD1   792  SCR 304           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+      FRRD1   792  UDF              85          6  2 3         2 1.66667E-01       3     1         85          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66667E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66700E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 303           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP BGN
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP END
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      FRRD1   792  SCR 304           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+      FRRD1   792  UDF              86          6  2 3         2 1.66667E-01       3     1         86          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66667E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66700E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 303           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP BGN
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP END
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      FRRD1   792  SCR 304           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+      FRRD1   792  UDF              87          6  2 3         2 1.66667E-01       3     1         87          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66667E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66700E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 303           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP BGN
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP END
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      FRRD1   792  SCR 304           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+      FRRD1   792  UDF              88          6  2 3         2 1.66667E-01       3     1         88          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66667E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66700E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 303           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP BGN
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP END
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      FRRD1   792  SCR 304           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+      FRRD1   792  UDF              89          6  2 3         2 1.66667E-01       3     1         89          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66667E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66700E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 303           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP BGN
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP END
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      FRRD1   792  SCR 304           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+      FRRD1   792  UDF              90          6  2 3         2 1.66667E-01       3     1         90          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66667E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66700E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 303           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP BGN
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP END
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      FRRD1   792  SCR 304           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+      FRRD1   792  UDF              91          6  2 3         2 1.66667E-01       3     1         91          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66667E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66700E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 303           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP BGN
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP END
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      FRRD1   792  SCR 304           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+      FRRD1   792  UDF              92          6  2 3         2 1.66667E-01       3     1         92          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66667E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66700E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 303           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP BGN
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP END
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      FRRD1   792  SCR 304           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+      FRRD1   792  UDF              93          6  2 3         2 1.66667E-01       3     1         93          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66667E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66700E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 303           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP BGN
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP END
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      FRRD1   792  SCR 304           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+      FRRD1   792  UDF              94          6  2 3         2 1.66667E-01       3     1         94          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66667E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66700E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 303           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP BGN
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP END
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      FRRD1   792  SCR 304           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+      FRRD1   792  UDF              95          6  2 3         2 1.66667E-01       3     1         95          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66667E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66700E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 303           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP BGN
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP END
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      FRRD1   792  SCR 304           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+      FRRD1   792  UDF              96          6  2 3         2 1.66667E-01       3     1         96          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66667E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66700E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 303           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP BGN
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP END
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      FRRD1   792  SCR 304           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+      FRRD1   792  UDF              97          6  2 3         2 1.66667E-01       3     1         97          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66667E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66700E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 303           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP BGN
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP END
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      FRRD1   792  SCR 304           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+      FRRD1   792  UDF              98          6  2 3         2 1.66667E-01       3     1         98          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66667E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66700E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 303           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP BGN
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP END
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      FRRD1   792  SCR 304           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+      FRRD1   792  UDF              99          6  2 3         2 1.66667E-01       3     1         99          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66667E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66700E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 303           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP BGN
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP END
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      FRRD1   792  SCR 304           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+      FRRD1   792  UDF             100          6  2 3         2 1.66667E-01       3     1        100          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66667E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66700E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 303           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP BGN
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP END
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      FRRD1   792  SCR 304           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+      FRRD1   792  UDF             101          6  2 3         2 1.66667E-01       3     1        101          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66667E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66700E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 303           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP BGN
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP END
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      FRRD1   792  SCR 304           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+      FRRD1   792  UDF             102          6  2 3         2 1.66667E-01       3     1        102          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66667E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66700E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 303           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP BGN
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP END
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      FRRD1   792  SCR 304           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+      FRRD1   792  UDF             103          6  2 3         2 1.66667E-01       3     1        103          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66667E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66700E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 303           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP BGN
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP END
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      FRRD1   792  SCR 304           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+      FRRD1   792  UDF             104          6  2 3         2 1.66667E-01       3     1        104          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66667E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66700E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 303           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP BGN
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP END
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      FRRD1   792  SCR 304           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+      FRRD1   792  UDF             105          6  2 3         2 1.66667E-01       3     1        105          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66667E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 305           6          6  6 3         2 1.66700E-01       3     1          6          1          1         0 *8**
+      FRRD1   792  SCR 303           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP BGN
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    MUMPSDCP END
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      FRRD1   792  SCR 304           1          6  2 3         2 1.66667E-01       3     1          1          1          1         0 *8**
+      FRRD1   792  UDF             106          6  2 3         2 1.66667E-01       3     1        106          1          1         0 *8**
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    FREQRS  876     MSGHAN  BEGN    
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    SEDFREQ 946  (S)VDR1    BEGN    
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    VDR1    13      VDR     BEGN    
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    VDR1    26      OUTPUT2 BEGN    
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    SEDFREQ 947     CASEOREQBEGN    
+ 21:47:41     0:00     1237.0         0.0         0.3        0.0    SEDFREQ 949  (S)DISPRS  BEGN    
+ 21:47:41     0:00     1238.0         1.0         0.3        0.0    DISPRS  122  (S)SPDR    BEGN    
+ 21:47:41     0:00     1238.0         0.0         0.3        0.0    SPDR    31      MATMOD  BEGN    
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      MATMOD  31   SPDRPV1X          1         12  2 1        12 1.00000E+00       3    12          1         12         12         0 *8**
+ 21:47:41     0:00     1238.0         0.0         0.3        0.0    SPDR    49   (S)XADD5   BEGN    
+ 21:47:41     0:00     1238.0         0.0         0.3        0.0    DISPRS  147  (S)SPMPYAD BEGN    
+ 21:47:41     0:00     1238.0         0.0         0.3        0.0    SPMPYAD 31      MATMOD  BEGN    
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      MATMOD  31   PVA1              1         12  2 1         6 5.00000E-01       3     6          1          6          6         0 *8**
+ 21:47:41     0:00     1238.0         0.0         0.3        0.0    SPMPYAD 53      MPYAD   BEGN    
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      MPYAD   53   UPX             106         12  2 3         4 1.66667E-01       3     1        212          7          7         0 *8**
+ 21:47:41     0:00     1238.0         0.0         0.3        0.0    DISPRS  228     UMERGE1 BEGN    
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      UMERGE1 228  SCR 301           1         12  2 1         6 5.00000E-01       3     6          1          6          6         0 *8**
+ 21:47:41     0:00     1238.0         0.0         0.3        0.0    DISPRS  229     UMERGE1 BEGN    
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      UMERGE1 229  SCR 301           1         12  2 1         6 5.00000E-01       3     6          1          6          6         0 *8**
+      UMERGE1 229  KSN              12          6  2 3         2 1.66667E-01       3     1         12          1          1         0 *8**
+ 21:47:41     0:00     1238.0         0.0         0.3        0.0    DISPRS  230     UMERGE1 BEGN    
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      UMERGE1 230  SCR 301           1         12  2 1         6 5.00000E-01       3     6          1          6          6         0 *8**
+ 21:47:41     0:00     1238.0         0.0         0.3        0.0    DISPRS  231  (S)CFORCE2 BEGN    
+ 21:47:41     0:00     1238.0         0.0         0.3        0.0    CFORCE2 74      MATMOD  BEGN    
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      MATMOD  74   KMAX              1          6  2 1         6 1.00000E+00       3     6          1          6          6         0 *8**
+ 21:47:41     0:00     1238.0         0.0         0.3        0.0    CFORCE2 87      UPARTN  BEGN    
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      UPARTN  87   SCR 301           1         12  2 1         6 5.00000E-01       3     6          1          6          6         0 *8**
+      UPARTN  87   PGS             106          6  2 3         0 0.00000E+00       3     0          1          0          0       106 *8**
+ 21:47:41     0:00     1238.0         0.0         0.3        0.0    CFORCE2 88      MATMOD  BEGN    
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      MATMOD  88   PMAX              1          6  2 1         0 0.00000E+00       3     0          1          0          0         1 *8**
+ 21:47:41     0:00     1238.0         0.0         0.3        0.0    CFORCE2 93   (S)XADD5   BEGN    
+ 21:47:41     0:00     1238.0         0.0         0.3        0.0    CFORCE2 94   (S)XADD5   BEGN    
+ 21:47:41     0:00     1238.0         0.0         0.3        0.0    CFORCE2 95      DIAGONALBEGN    
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      DIAGONAL95   PARTSX            1          6  2 1         6 1.00000E+00       3     6          1          6          6         0 *8**
+ 21:47:41     0:00     1238.0         0.0         0.3        0.0    CFORCE2 96      MPYAD   BEGN    
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      MPYAD   96   PARTS             1          6  2 1         6 1.00000E+00       3     6          1          6          6         0 *8**
+ 21:47:41     0:00     1238.0         0.0         0.3        0.0    CFORCE2 103     PARTN   BEGN    
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      PARTN   103  KXY1X            12          6  2 3         2 1.66700E-01       3     1         12          1          1         0 *8**
+ 21:47:41     0:00     1238.0         0.0         0.3        0.0    CFORCE2 150     PARTN   BEGN    
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      PARTN   150  RGXX              6         12  2 1         1 8.33000E-02       3     0          6          1          1         0 *8**
+ 21:47:41     0:00     1238.0         0.0         0.3        0.0    CFORCE2 151  (S)SPMPYAD BEGN    
+ 21:47:41     0:00     1238.0         0.0         0.3        0.0    SPMPYAD 31      MATMOD  BEGN    
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      MATMOD  31   PVA1              1         12  2 1         6 5.00000E-01       3     6          1          6          6         0 *8**
+ 21:47:41     0:00     1238.0         0.0         0.3        0.0    SPMPYAD 69      MPYAD   BEGN    
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      MPYAD   69   PX              106          6  2 3         0 0.00000E+00       3     0          1          0          0       106 *8**
+ 21:47:41     0:00     1238.0         0.0         0.3        0.0    CFORCE2 239  (S)SPMPYAD BEGN    
+ 21:47:41     0:00     1238.0         0.0         0.3        0.0    SPMPYAD 31      MATMOD  BEGN    
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      MATMOD  31   PVA1              1          6  2 1         6 1.00000E+00       3     6          1          6          6         0 *8**
+ 21:47:41     0:00     1238.0         0.0         0.3        0.0    SPMPYAD 53      MPYAD   BEGN    
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      MPYAD   53   QX1X            106          6  2 3         2 1.66667E-01       3     1        106          1          1         0 *8**
+ 21:47:41     0:00     1238.0         0.0         0.3        0.0    CFORCE2 271  (S)XADD5   BEGN    
+ 21:47:41     0:00     1238.0         0.0         0.3        0.0    CFORCE2 357     UMERGE  BEGN    
+ *8** Module  DMAP Matrix         Cols       Rows  F T     NzWds     Density  BlockT  StrL    NbrStr    BndAvg    BndMax    NulCol
+      UMERGE  357  SCR 301           1         12  2 1         6 5.00000E-01       3     6          1          6          6         0 *8**
+      UMERGE  357  QGX             106         12  2 3         2 8.33333E-02       3     1        106          1          1         0 *8**
+ 21:47:41     0:00     1238.0         0.0         0.3        0.0    CFORCE2 362  (S)XADD5   BEGN    
+ 21:47:41     0:00     1238.0         0.0         0.3        0.0    SEDFREQ 985  (S)SESUM   BEGN    
+ 21:47:41     0:00     1239.0         1.0         0.3        0.0    SEDFREQ 1019 (S)SUPER3  BEGN    
+ 21:47:41     0:00     1239.0         0.0         0.3        0.0    SUPER3  306     SEP4    BEGN    
+ 21:47:41     0:00     1239.0         0.0         0.3        0.0    SUPER3  543     SEDRDR  BEGN    
+ 21:47:41     0:00     1239.0         0.0         0.3        0.0                            
+ 21:47:41     0:00     1239.0         0.0         0.3        0.0    SUPER3  691     PVT     BEGN    
+ 21:47:41     0:00     1239.0         0.0         0.3        0.0    SUPER3  722     SEDR    BEGN    
+ 21:47:41     0:00     1239.0         0.0         0.3        0.0    SUPER3  788     PVT     BEGN    
+ 21:47:41     0:00     1239.0         0.0         0.3        0.0    SUPER3  812  (S)DBSETOFFBEGN    
+ 21:47:41     0:00     1239.0         0.0         0.3        0.0    SUPER3  832     LCGEN   BEGN    
+ 21:47:41     0:00     1239.0         0.0         0.3        0.0    SUPER3  916     DTIIN   BEGN    
+ 21:47:41     0:00     1239.0         0.0         0.3        0.0    SUPER3  917     DTIIN   BEGN    
+ 21:47:41     0:00     1239.0         0.0         0.3        0.0    SUPER3  1500 (S)SEDRCVR BEGN    
+ 21:47:41     0:00     1240.0         1.0         0.3        0.0    SEDRCVR 88      DPD     BEGN    
+ 21:47:41     0:00     1240.0         0.0         0.3        0.0    SEDRCVR 170  (S)SEDRCVRBBEGN    
+ 21:47:41     0:00     1240.0         0.0         0.3        0.0    SEDRCVRB33   (S)CHCKPEAKBEGN    
+ 21:47:41     0:00     1240.0         0.0         0.3        0.0    SEDRCVRB200  (S)CHCKPEAKBEGN    
+ 21:47:41     0:00     1240.0         0.0         0.3        0.0    SEDRCVRB201  (S)CHCKPEAKBEGN    
+ 21:47:41     0:00     1240.0         0.0         0.3        0.0    SEDRCVRB202  (S)CHCKPEAKBEGN    
+ 21:47:41     0:00     1240.0         0.0         0.3        0.0    SEDRCVRB207     SDR2    BEGN    
+ 21:47:41     0:00     1240.0         0.0         0.3        0.0    SEDRCVRB232     SDR2    BEGN    
+ 21:47:41     0:00     1240.0         0.0         0.3        0.0    SEDRCVRB267  (S)COMBOUT BEGN    
+ 21:47:41     0:00     1240.0         0.0         0.3        0.0    SEDRCVRB268  (S)COMBOUT BEGN    
+ 21:47:41     0:00     1240.0         0.0         0.3        0.0    SEDRCVRB269  (S)COMBOUT BEGN    
+ 21:47:41     0:00     1240.0         0.0         0.3        0.0    SEDRCVRB270  (S)COMBOUT BEGN    
+ 21:47:41     0:00     1240.0         0.0         0.3        0.0    SEDRCVRB271  (S)COMBOUT BEGN    
+ 21:47:41     0:00     1240.0         0.0         0.3        0.0    SEDRCVRB281     SDR2    BEGN    
+ 21:47:41     0:00     1240.0         0.0         0.3        0.0    SEDRCVRB306  (S)COMBOUT BEGN    
+ 21:47:41     0:00     1241.0         1.0         0.3        0.0    SEDRCVR 197     SDRXD   BEGN    
+ 21:47:41     0:00     1241.0         0.0         0.3        0.0    SEDRCVR 206  (S)COMBOUT BEGN    
+ 21:47:41     0:00     1241.0         0.0         0.3        0.0    SEDRCVR 207  (S)COMBOUT BEGN    
+ 21:47:41     0:00     1241.0         0.0         0.3        0.0    SEDRCVR 208  (S)COMBOUT BEGN    
+ 21:47:41     0:00     1241.0         0.0         0.3        0.0    SEDRCVR 209  (S)COMBOUT BEGN    
+ 21:47:41     0:00     1241.0         0.0         0.3        0.0    SEDRCVR 210  (S)COMBOUT BEGN    
+ 21:47:41     0:00     1241.0         0.0         0.3        0.0    SEDRCVR 358     SDR3    BEGN    
+ 21:47:41     0:00     1241.0         0.0         0.3        0.0    SEDRCVR 374     SDR3    BEGN    
+ 21:47:41     0:00     1241.0         0.0         0.3        0.0    SEDRCVR 375     SDR3    BEGN    
+ 21:47:41     0:00     1241.0         0.0         0.3        0.0    SEDRCVR 376     SDR3    BEGN    
+ 21:47:41     0:00     1241.0         0.0         0.3        0.0    SEDRCVR 377     SDR3    BEGN    
+ 21:47:41     0:00     1241.0         0.0         0.3        0.0    SEDRCVR 397  (S)SEDRCVR3BEGN    
+ 21:47:41     0:00     1241.0         0.0         0.3        0.0    SEDRCVR 399  (S)SEDRCVR6BEGN    
+ 21:47:41     0:00     1241.0         0.0         0.3        0.0    SEDRCVR690      OUTPUT2 BEGN    
+ 21:47:41     0:00     1241.0         0.0         0.3        0.0    SEDRCVR696      MATMOD  BEGN    
+ 21:47:41     0:00     1241.0         0.0         0.3        0.0    SEDRCVR6541     EULAN   BEGN    
+ 21:47:41     0:00     1241.0         0.0         0.3        0.0    SEDRCVR6542     OUTPUT2 BEGN    
+ 21:47:41     0:00     1241.0         0.0         0.3        0.0    SEDRCVR 444  (S)SEDRCVR2BEGN    
+ 21:47:41     0:00     1241.0         0.0         0.3        0.0    SEDRCVR236      DTIIN   BEGN    
+ 21:47:41     0:00     1241.0         0.0         0.3        0.0    SEDRCVR248      DPD     BEGN    
+ 21:47:41     0:00     1241.0         0.0         0.3        0.0    SEDRCVR2618     XYTRAN  BEGN    
+ 21:47:41     0:00     1241.0         0.0         0.3        0.0    SEDRCVR2723     RANDOM  BEGN    
+ 21:47:41     0:00     1241.0         0.0         0.3        0.0    SEDRCVR2727     SDR3    BEGN    
+ 21:47:41     0:00     1241.0         0.0         0.3        0.0    SEDRCVR2728     TRLPSD  BEGN    
+ 21:47:41     0:00     1241.0         0.0         0.3        0.0    SEDRCVR2739     SDR3    BEGN    
+ 21:47:41     0:00     1241.0         0.0         0.3        0.0    SEDRCVR2812     SDR3    BEGN    
+ 21:47:41     0:00     1241.0         0.0         0.3        0.0    SEDRCVR2813     SDR3    BEGN    
+ 21:47:41     0:00     1241.0         0.0         0.3        0.0    SEDRCVR2814     SDR3    BEGN    
+ 21:47:41     0:00     1241.0         0.0         0.3        0.0    SEDRCVR2815     SDR3    BEGN    
+ 21:47:41     0:00     1241.0         0.0         0.3        0.0    SEDRCVR2817     SDR3    BEGN    
+ 21:47:41     0:00     1241.0         0.0         0.3        0.0    SEDRCVR2821     SDR3    BEGN    
+ 21:47:41     0:00     1241.0         0.0         0.3        0.0    SEDRCVR2822     SDR3    BEGN    
+ 21:47:41     0:00     1241.0         0.0         0.3        0.0    SEDRCVR2823     SDR3    BEGN    
+ 21:47:41     0:00     1241.0         0.0         0.3        0.0    SEDRCVR2838     OFP     BEGN    
+ 21:47:41     0:00     1241.0         0.0         0.3        0.0    SEDRCVR2839     OFP     BEGN    
+ 21:47:41     0:00     1241.0         0.0         0.3        0.0    SEDRCVR2840     OFP     BEGN    
+ 21:47:41     0:00     1241.0         0.0         0.3        0.0    SEDRCVR2841     OFP     BEGN    
+ 21:47:41     0:00     1241.0         0.0         0.3        0.0    SEDRCVR2843     OFP     BEGN    
+ 21:47:41     0:00     1241.0         0.0         0.3        0.0    SEDRCVR2847     OFP     BEGN    
+ 21:47:41     0:00     1241.0         0.0         0.3        0.0    SEDRCVR2848     OFP     BEGN    
+ 21:47:41     0:00     1241.0         0.0         0.3        0.0    SEDRCVR2849     OFP     BEGN    
+ 21:47:41     0:00     1241.0         0.0         0.3        0.0    SEDRCVR2850     OFP     BEGN    
+ 21:47:41     0:00     1241.0         0.0         0.3        0.0    SEDRCVR2851     OFP     BEGN    
+ 21:47:41     0:00     1241.0         0.0         0.3        0.0    SEDRCVR2865     OUTPUT2 BEGN    
+ 21:47:41     0:00     1241.0         0.0         0.3        0.0    SEDRCVR2885     OUTPUT2 BEGN    
+ 21:47:41     0:00     1241.0         0.0         0.3        0.0    SEDRCVR2886     OUTPUT2 BEGN    
+ 21:47:41     0:00     1241.0         0.0         0.3        0.0    SEDRCVR2887     OUTPUT2 BEGN    
+ 21:47:41     0:00     1241.0         0.0         0.3        0.0    SEDRCVR2888     OUTPUT2 BEGN    
+ 21:47:41     0:00     1241.0         0.0         0.3        0.0    SEDRCVR2890     OUTPUT2 BEGN    
+ 21:47:41     0:00     1241.0         0.0         0.3        0.0    SEDRCVR2894     OUTPUT2 BEGN    
+ 21:47:41     0:00     1241.0         0.0         0.3        0.0    SEDRCVR2895     OUTPUT2 BEGN    
+ 21:47:41     0:00     1241.0         0.0         0.3        0.0    SEDRCVR2896     OUTPUT2 BEGN    
+ 21:47:41     0:00     1241.0         0.0         0.3        0.0    SEDRCVR2897     OUTPUT2 BEGN    
+ 21:47:41     0:00     1241.0         0.0         0.3        0.0    SEDRCVR2898     OUTPUT2 BEGN    
+ 21:47:41     0:00     1241.0         0.0         0.3        0.0    SEDRCVR21154    XYTRAN  BEGN    
+ 21:47:41     0:00     1241.0         0.0         0.4        0.0    SEDRCVR 633  (S)SEDRCVR8BEGN    
+ 21:47:41     0:00     1241.0         0.0         0.4        0.0    SEDRCVR 635     TOPITHOSBEGN    
+ 21:47:41     0:00     1241.0         0.0         0.4        0.0    SEDRCVR 636     TOPITHOSBEGN    
+ 21:47:41     0:00     1241.0         0.0         0.4        0.0    SEDRCVR 637     TOPITHOSBEGN    
+ 21:47:41     0:00     1241.0         0.0         0.4        0.0    SEDFREQ 1507 (S)PRTSUM  BEGN    
+ 21:47:41     0:00     1241.0         0.0         0.4        0.0    SEDFREQ 1508    MSGHAN  BEGN    
+ 21:47:41     0:00     1241.0         0.0         0.4        0.0    SEDFREQ 1509    EXIT    BEGN    
+
+ *** TOTAL MEMORY AND DISK USAGE STATISTICS ***
+
+ +---------- SPARSE SOLUTION MODULES -----------+         +------------- MAXIMUM DISK USAGE -------------+
+      HIWATER               SUB_DMAP        DMAP               HIWATER               SUB_DMAP        DMAP
+      (WORDS)   DAY_TIME      NAME         MODULE                 (MB)   DAY_TIME      NAME         MODULE
+    385843300   21:47:41    FREQRS    792  FRRD1                49.938   21:47:41    SEDFREQ  1509  EXIT    
+
+
+ *** DATABASE USAGE STATISTICS ***
+ 
+ +------------------ LOGICAL DBSETS ------------------+   +------------------------- DBSET FILES -------------------------+
+  DBSET      ALLOCATED   BLOCKSIZE        USED    USED     FILE       ALLOCATED     HIWATER       HIWATER  I/O TRANSFERRED
+              (BLOCKS)     (WORDS)    (BLOCKS)       %                 (BLOCKS)    (BLOCKS)          (MB)             (GB)
+ 
+  MASTER          5000       32768          59    1.18     MASTER          5000          59        14.750            0.583
+  DBALL        2000000       32768           6    0.00     DBALL        2000000           6         1.500            0.007
+  OBJSCR          5000        8192         531   10.62     OBJSCR          5000         531        33.188            0.118
+  SCRATCH      4005880       32768          11    0.00    (MEMFILE         5880         150        37.500            0.000)
+                                                           SCRATCH      2000000           1         0.250            0.000
+                                                           SCR300       2000000           1         0.250            0.000
+                                                                                                            ==============
+                                                                                                     TOTAL:          0.709
+ 
+ *** BUFFER POOL AND SCRATCH 300 USAGE STATISTICS ***
+ 
+ +----------------- BUFFER POOL -----------------+      +-------------------------- SCRATCH 300 --------------------------+ 
+   OPTION        BLOCKS      BLOCKS      BLOCKS           OPTION    HIWATER               SUB_DMAP        DMAP     OPN/CLS
+  SELECTED     ALLOCATED     REUSED     RELEASED         SELECTED  (BLOCKS)   DAY_TIME      NAME         MODULE    COUNTER
+  GINO,EXEC        5877        9343           0              2           1    21:47:41    PREFACE     0  PREFACE       0
+
+
+ *** SUMMARY OF PHYSICAL FILE I/O ACTIVITY ***
+
+ ASSIGNED PHYSICAL FILE NAME                                   RECL (BYTES)  READ/WRITE COUNTS   WSIZE  (WNUM)  MAP-I/O CNT
+ ------------------------------------------------------------  -----------  -------------------  -------------  -----------
+ c:/scratch/frf-001.T15736_41.SCRATCH                               262144          0/1            N/A            N/A          
+ c:/scratch/frf-001.T15736_41.OBJSCR                                 65536          0/1939         N/A            N/A          
+ c:/scratch/frf-001.T15736_41.MASTER                                262144          3/2387         N/A            N/A          
+ c:/scratch/frf-001.T15736_41.DBALL                                 262144          2/29           N/A            N/A          
+ c:/scratch/frf-001.T15736_41.SCR300                                262144          0/1            N/A            N/A          
+ c:/progra~1/siemens/.../nastran/scnas/em64tntl/SSS.MASTERA          65536         82/0            N/A            N/A          
+ c:/progra~1/siemens/.../nastran/scnas/em64tntl/SSS.MSCOBJ           65536        523/0            N/A            N/A          
+ 
