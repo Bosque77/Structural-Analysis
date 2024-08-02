@@ -1,0 +1,2 @@
+For the non-linear solver femap will default to a crecent constraint type. 
+This will cause issues so change it to default. 
