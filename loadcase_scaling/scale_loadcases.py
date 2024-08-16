@@ -31,13 +31,22 @@ def scale_loadcases(loadcases, scale_factor, lcid_not_to_change):
                     value = float(value)
                     if operation_lcid not in lcid_not_to_change:
                         value *= scale_factor
-                    scaled_operations.append(f"{value} ({operation_lcid})")
+                    # Limit the decimal places to 3
+                    scaled_operations.append(f"{value:.3f} ({operation_lcid})")
                 else:
                     # Add non-matching components (such as the signs) back to the list unchanged
                     scaled_operations.append(component)
             
-            # Rebuild the operations string
+            # Rebuild the operations string and correct double signs
             scaled_operations_str = ''.join(scaled_operations)
+            
+            # Correct double signs like "+ -" or "- -"
+            scaled_operations_str = re.sub(r'\+\s+\-', '- ', scaled_operations_str)
+            scaled_operations_str = re.sub(r'\-\s+\-', '+ ', scaled_operations_str)
+            scaled_operations_str = re.sub(r'\+\s+\+', '+ ', scaled_operations_str)
+            scaled_operations_str = re.sub(r'\-\s+\+', '- ', scaled_operations_str)
+
+            # Append the scaled loadcase
             scaled_loadcases.append(f"comb {lc_id} '{lc_name}' {scaled_operations_str}\n")
         else:
             # If the line doesn't start with 'comb', keep it unchanged
@@ -52,8 +61,8 @@ if __name__ == '__main__':
     with open(infile, 'r') as f:
         loadcases = f.readlines()
 
-    lcid_not_to_change = [101,102,103]
-    scale_factor = -2.0
+    lcid_not_to_change = [103]
+    scale_factor = 0.2
 
     # Process the loadcases and get the scaled versions
     scaled_loadcases = scale_loadcases(loadcases, scale_factor, lcid_not_to_change)
