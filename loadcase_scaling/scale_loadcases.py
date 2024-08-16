@@ -1,58 +1,66 @@
 import re
 
 def scale_loadcases(loadcases, scale_factor, lcid_not_to_change):
-    # Define the regex pattern to match the loadcases
-    pattern = re.compile(r'(\d+)\s+([^\d]+)\s+(.*)')
-
     scaled_loadcases = []
-
+    
+    # This regex will match lines that start with 'comb' followed by a loadcase ID, 
+    # a name enclosed in single quotes, and then the operations with numbers and parentheses.
+    comb_pattern = re.compile(r"^comb\s+(\d+)\s+'([^']+)'\s+(.+)")
+    
     for loadcase in loadcases:
-        match = pattern.match(loadcase)
-        if match:
-            lcid, lcname, operations = match.groups()
-            lcid = int(lcid)
-            
+        loadcase = loadcase.strip()  # Clean up whitespace
+
+        # Look for the loadcases that start with 'comb'
+        comb_match = comb_pattern.match(loadcase)
+        if comb_match:
+            lc_id, lc_name, operations = comb_match.groups()
+            lc_id = int(lc_id)
+
+            print(f"Processing loadcase {lc_id} with name {lc_name}")  # Debugging print
+
             # Split the operations part into individual components
             components = re.split(r'(\s[+-]\s)', operations)
             scaled_operations = []
 
             for component in components:
+                # Look for the pattern of a number followed by an LCID in parentheses
                 float_match = re.match(r'(\d*\.?\d+)\s+\((\d+)\)', component.strip())
                 if float_match:
-                    value, lc_id = float_match.groups()
-                    lc_id = int(lc_id)
+                    value, operation_lcid = float_match.groups()
+                    operation_lcid = int(operation_lcid)
                     value = float(value)
-                    if lc_id not in lcid_not_to_change:
+                    if operation_lcid not in lcid_not_to_change:
                         value *= scale_factor
-                    scaled_operations.append(f"{value} ({lc_id})")
+                    scaled_operations.append(f"{value} ({operation_lcid})")
                 else:
+                    # Add non-matching components (such as the signs) back to the list unchanged
                     scaled_operations.append(component)
             
-            # Correcting the signs in the operations string
+            # Rebuild the operations string
             scaled_operations_str = ''.join(scaled_operations)
-            scaled_operations_str = re.sub(r'\+\s+\-', '- ', scaled_operations_str)
-            scaled_operations_str = re.sub(r'\-\s+\-', '+ ', scaled_operations_str)
-            scaled_operations_str = re.sub(r'\+\s+\+', '+ ', scaled_operations_str)
-            scaled_operations_str = re.sub(r'\-\s+\+', '- ', scaled_operations_str)
-
-            scaled_loadcases.append(f"{lcid} {lcname} {scaled_operations_str}")
+            scaled_loadcases.append(f"comb {lc_id} '{lc_name}' {scaled_operations_str}\n")
         else:
-            scaled_loadcases.append(loadcase)
+            # If the line doesn't start with 'comb', keep it unchanged
+            scaled_loadcases.append(loadcase + "\n")
 
     return scaled_loadcases
 
-# Example usage:
-loadcases = [
-    "1 LoadCase_A 1.5 (101) + 2.0 (102) - 3.0 (103)",
-    "2 LoadCase_B 0.5 (104) + 1.0 (105)",
-    "3 LoadCase_C 2.5 (106) - 1.5 (107) + 4.0 (108)",
-    "4 LoadCase_D 1.0 (109)",
-    "5 LoadCase_E 3.0 (110) + 2.5 (111) - 1.0 (112)"
-]
+if __name__ == '__main__':
+    infile = './test_cond_file.cond'
+    outfile = './scaled_cond_file.cond'
 
-lcid_not_to_change = [101]
-scale_factor = 0.5
+    with open(infile, 'r') as f:
+        loadcases = f.readlines()
 
-scaled_loadcases = scale_loadcases(loadcases, scale_factor, lcid_not_to_change)
-for lc in scaled_loadcases:
-    print(lc)
+    lcid_not_to_change = [101,102,103]
+    scale_factor = -2.0
+
+    # Process the loadcases and get the scaled versions
+    scaled_loadcases = scale_loadcases(loadcases, scale_factor, lcid_not_to_change)
+    
+    # Write the scaled loadcases to a new file
+    with open(outfile, 'w') as f:
+        for lc in scaled_loadcases:
+            f.write(lc)
+
+    print(f"Scaled loadcases have been written to {outfile}")
