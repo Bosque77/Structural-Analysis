@@ -1,0 +1,83 @@
+DMIG    KAAX           0       6       1       0                       6
+DMIG*   KAAX                           2               1
+*                      2               1 3.047345210E+07
+DMIG*   KAAX                           2               2
+*                      2               2 5.115981420E+06
+DMIG*   KAAX                           2               3
+*                      2               3 5.115982279E+06
+DMIG*   KAAX                           2               4
+*                      2               4 5.810648015E+06
+DMIG*   KAAX                           2               5
+*                      2               3 7.673973419E+06
+*                      2               5 1.912932073E+07
+DMIG*   KAAX                           2               6
+*                      2               2-7.673972130E+06
+*                      2               6 1.912931879E+07
+DMIG    MAAX           0       6       1       0                       6
+DMIG*   MAAX                           2               1
+*                      2               1 2.940399573E-02
+DMIG*   MAAX                           2               2
+*                      2               2 2.940399573E-02
+DMIG*   MAAX                           2               3
+*                      2               3 2.940399573E-02
+DMIG*   MAAX                           2               4
+*                      2               4 1.751497309E-03
+DTI     TUG1    0       12      6       32767   0       7       0               
+        PHIP            7                       REAL           1ENDREC          
+DTI     TUG1    1       1       0.00000 2       0.00000 3       0.00000         
+        4       0.00000 5       0.00000 6       0.00000 ENDREC                  
+DTI     TUG1    2                                                               
+        TYPE    ID      COMP    ROW     TYPE    ID      COMP    ROW             
+        1       1       6       1       1       2       6       7               
+        ENDREC                                                                  
+DTI     TQG1    0       12      6       32767   0       3       0               
+        TQP             3                       REAL           1ENDREC          
+DTI     TQG1    1       1       0.00000 2       0.00000 3       0.00000         
+        4       0.00000 5       0.00000 6       0.00000 ENDREC                  
+DTI     TQG1    2                                                               
+        TYPE    ID      COMP    ROW     TYPE    ID      COMP    ROW             
+        1       1       6       1       1       2       6       7               
+        ENDREC                                                                  
+DMIG    MUG1T          0       9       1       0                      12
+DMIG*   MUG1T                          7               0
+*                      2               1 1.000000000E+00
+DMIG*   MUG1T                          8               0
+*                      2               2 1.000000000E+00
+DMIG*   MUG1T                          9               0
+*                      2               3 1.000000000E+00
+DMIG*   MUG1T                         10               0
+*                      2               4 1.000000000E+00
+DMIG*   MUG1T                         11               0
+*                      2               5 1.000000000E+00
+DMIG*   MUG1T                         12               0
+*                      2               6 1.000000000E+00
+DMIG    MQG1T          0       9       1       0                      12
+DMIG*   MQG1T                          1               0
+*                      2               1-3.047345210E+07
+DMIG*   MQG1T                          2               0
+*                      2               2-5.115981420E+06
+*                      2               6 7.673972130E+06
+DMIG*   MQG1T                          3               0
+*                      2               3-5.115982279E+06
+*                      2               5-7.673973419E+06
+DMIG*   MQG1T                          4               0
+*                      2               4-5.810648015E+06
+DMIG*   MQG1T                          5               0
+*                      2               3 7.673973419E+06
+*                      2               5 3.892599529E+06
+DMIG*   MQG1T                          6               0
+*                      2               2-7.673972130E+06
+*                      2               6 3.892597595E+06
+DMIG    MUG1BT         0       9       1       0                      12
+DMIG*   MUG1BT                         7               0
+*                      2               1 1.000000000E+00
+DMIG*   MUG1BT                         8               0
+*                      2               2 1.000000000E+00
+DMIG*   MUG1BT                         9               0
+*                      2               3 1.000000000E+00
+DMIG*   MUG1BT                        10               0
+*                      2               4 1.000000000E+00
+DMIG*   MUG1BT                        11               0
+*                      2               5 1.000000000E+00
+DMIG*   MUG1BT                        12               0
+*                      2               6 1.000000000E+00
