@@ -154,8 +154,29 @@ Function CopyProperty(femapApp As femap.model, origID As Long, newID As Long) As
     Dim prop As femap.Prop
     Set prop = femapApp.feProp
     If prop.Get(origID) = femap.zReturnCode.FE_OK Then
+        ' Store original IDs
+        Dim origLayupID As Long
+        Dim origMatlID As Long
+        origLayupID = prop.layupID
+        origMatlID = prop.matlID
+        
+        ' Set new property ID
         prop.ID = newID
+        
+        ' Update references to layup and material IDs if they exist
+        If origLayupID > 0 Then
+            prop.layupID = origLayupID + 10000
+        End If
+        
+        If origMatlID > 0 Then
+            prop.matlID = origMatlID + 10000
+        End If
+        
+        ' Save the updated property
         CopyProperty = prop.Put(newID)
+        
+        femapApp.feAppMessage femap.zMessageColor.FCM_NORMAL, "Property " & origID & " copied to " & newID & _
+            " with layupID=" & prop.layupID & ", matlID=" & prop.matlID
     Else
         CopyProperty = -1
     End If
