@@ -100,16 +100,16 @@ Sub Main()
         id = matIDs.Next
     Loop
 
-    ' Copy Properties
-    id = propIDs.First
+    ' Copy Materials FIRST
+    id = matIDs.First
     Do While id > 0
-        If CopyProperty(femapApp, id, id + 10000) <> 0 Then
-            femapApp.feAppMessage femap.zMessageColor.FCM_ERROR, "Error copying property ID " & id
+        If CopyMaterial(femapApp, id, id + 10000) <> 0 Then
+            femapApp.feAppMessage femap.zMessageColor.FCM_ERROR, "Error copying material ID " & id
         End If
-        id = propIDs.Next
+        id = matIDs.Next
     Loop
 
-    ' Copy Layups
+    ' Copy Layups SECOND (so they can reference the new materials)
     id = layupIDs.First
     Do While id > 0
         If CopyLayup(femapApp, id, id + 10000) <> 0 Then
@@ -118,13 +118,13 @@ Sub Main()
         id = layupIDs.Next
     Loop
 
-    ' Copy Materials
-    id = matIDs.First
+    ' Copy Properties LAST (so they can reference the new materials and layups)
+    id = propIDs.First
     Do While id > 0
-        If CopyMaterial(femapApp, id, id + 10000) <> 0 Then
-            femapApp.feAppMessage femap.zMessageColor.FCM_ERROR, "Error copying material ID " & id
+        If CopyProperty(femapApp, id, id + 10000) <> 0 Then
+            femapApp.feAppMessage femap.zMessageColor.FCM_ERROR, "Error copying property ID " & id
         End If
-        id = matIDs.Next
+        id = propIDs.Next
     Loop
 
     ' Update element propIDs only
@@ -184,12 +184,72 @@ End Function
 
 Function CopyLayup(femapApp As femap.model, origID As Long, newID As Long) As Integer
     Dim layup As femap.Layup
+    
+    ' Create layup object
     Set layup = femapApp.feLayup
-    If layup.Get(origID) = femap.zReturnCode.FE_OK Then
-        layup.ID = newID
-        CopyLayup = layup.Put(newID)
-    Else
+    
+    ' Get the original layup
+    If layup.Get(origID) <> femap.zReturnCode.FE_OK Then
+        femapApp.feAppMessage femap.zMessageColor.FCM_ERROR, "Failed to get original layup ID " & origID
         CopyLayup = -1
+        Exit Function
+    End If
+    
+    ' Store the original ID and change to new ID
+    layup.ID = newID
+    
+    ' Put the copied layup
+    If layup.Put(newID) <> femap.zReturnCode.FE_OK Then
+        femapApp.feAppMessage femap.zMessageColor.FCM_ERROR, "Failed to create new layup ID " & newID
+        CopyLayup = -1
+        Exit Function
+    End If
+    
+    ' Now get it again to update it
+    If layup.Get(newID) <> femap.zReturnCode.FE_OK Then
+        femapApp.feAppMessage femap.zMessageColor.FCM_ERROR, "Failed to get new layup ID " & newID
+        CopyLayup = -1
+        Exit Function
+    End If
+    
+    ' Try to update material IDs in plies using brute force approach
+    Dim plyIndex As Long
+    Dim matlID As Long
+    Dim updatedCount As Long
+    
+    plyIndex = 1
+    updatedCount = 0
+    
+    ' Try up to 100 plies
+    For plyIndex = 1 To 100
+        On Error Resume Next
+        matlID = layup.GetPlyMatl(plyIndex)
+        
+        If Err.Number = 0 And matlID > 0 Then
+            ' Valid material ID found, update it
+            layup.SetPlyMatl plyIndex, matlID + 10000
+            
+            If Err.Number = 0 Then
+                updatedCount = updatedCount + 1
+                femapApp.feAppMessage femap.zMessageColor.FCM_NORMAL, "Layup " & newID & " Ply " & plyIndex & " updated to material ID: " & (matlID + 10000)
+            Else
+                femapApp.feAppMessage femap.zMessageColor.FCM_ERROR, "Failed to update material for ply " & plyIndex & ": " & Err.Description
+            End If
+            Err.Clear
+        ElseIf Err.Number <> 0 Then
+            ' No material ID or error occurred
+            Err.Clear
+        End If
+        On Error GoTo 0
+    Next plyIndex
+    
+    ' Save the updated layup
+    If layup.Put(newID) <> femap.zReturnCode.FE_OK Then
+        femapApp.feAppMessage femap.zMessageColor.FCM_ERROR, "Failed to save updated layup ID " & newID
+        CopyLayup = -1
+    Else
+        CopyLayup = 0
+        femapApp.feAppMessage femap.zMessageColor.FCM_NORMAL, "Layup " & origID & " copied to " & newID & " with " & updatedCount & " plies updated"
     End If
 End Function
 
